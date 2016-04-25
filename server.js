@@ -43,7 +43,30 @@ app.get('/delphidata', function (req, res) {
   // for each gender. 
   // Display that data using D3 with gender on the x-axis and 
   // total respondents on the y-axis.
-  return { delphidata: "No data present." }
+  var conString= process.env.DATABASE_CONNECTION_URL;
+  var client = new pg.Client(conString);
+  client.connect(function(err) {
+    if(err){
+      return console.error("could not connect to postgres", err);
+    }
+
+    var query = 'SELECT x.gender, x.number_of_respondents FROM cogs121_16_raw.cdph_smoking_prevalence_in_adults_1984_2013 x WHERE year = 2003 ORDER BY x.number_of_respondents, x.gender DESC'
+    //Lists all marijuana cases by ascending date
+    var query2 = 'SELECT charge_description, community, activity_date FROM cogs121_16_raw.arjis_crimes WHERE charge_description LIKE \'%MARIJUANA%\' AND community != \'\' ORDER BY activity_date'
+    //Lists all the communities and the number of marijuana cases associated with ea commuity
+    var query3 = 'SELECT community, COUNT(charge_description) FROM cogs121_16_raw.arjis_crimes WHERE charge_description LIKE \'%MARIJUANA%\' AND community != \'\' GROUP BY community ORDER BY community'
+    //Lists all the marijuana cases that occur in each zip code in San Diego
+    var query4 = 'SELECT zip, COUNT(charge_description) FROM cogs121_16_raw.arjis_crimes WHERE charge_description LIKE \'%MARIJUANA%\' AND community = \'SAN DIEGO\' GROUP BY zip ORDER BY zip;'
+    //Lists all the marijuana cases that occur in each zip code and ordered by each zip Code in San Diego
+    var query5 = 'SELECT * FROM cogs121_16_raw.arjis_crimes WHERE charge_description LIKE \'%MARIJUANA%\' AND community = \'SAN DIEGO\' AND zip != \'\' ORDER BY zip'
+    client.query(query2, function(err, result){
+                    if(err){
+                      return console.error('error running query',err);
+                    }
+                    console.log(result.rows);
+                    res.json(result.rows);
+                  });
+  });
 });
 
 
