@@ -145,7 +145,7 @@ background: skyblue; /* For browsers that do not support gradients */
     position:absolute;
     bottom: 0px;
     width:100%;
-    height: calc(100% - 52px);
+    height: calc(100% - 54px);
     padding-top: 53px;
  
     background: skyblue; /* For browsers that do not support gradients */    
