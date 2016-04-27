@@ -57,7 +57,10 @@ app.get('/delphidata', function (req, res) {
     var query3 = 'SELECT zip, COUNT(charge_description) FROM cogs121_16_raw.arjis_crimes WHERE charge_description LIKE \'%MARIJUANA%\' AND community = \'SAN DIEGO\' GROUP BY zip ORDER BY zip';
     //Lists all the marijuana cases that occur in each zip code and ordered by each zip Code in San Diego
     var query4 = 'SELECT * FROM cogs121_16_raw.arjis_crimes WHERE charge_description LIKE \'%MARIJUANA%\' AND community = \'SAN DIEGO\' AND zip != \'\' AND zip != \'92014\' AND zip != \'92046\' AND zip != \'92127\' AND zip != \'92128\' AND zip != \'92129\' AND zip != \'92182\' ORDER BY zip';
-    /*client.query(query4, function(err, result){
+    //Counts number of marijuana cases for each zipcode in San Diego
+    var query5 = 'SELECT zip, COUNT(*) FROM cogs121_16_raw.arjis_crimes WHERE charge_description LIKE \'%MARIJUANA%\' AND community = \'SAN DIEGO\' AND zip != \'\' AND zip != \'92014\' AND zip != \'92046\' AND zip != \'92127\' AND zip != \'92128\' AND zip != \'92129\' AND zip != \'92182\' GROUP BY zip ORDER BY zip;'
+
+    client.query(query5, function(err, result){
                     if(err){
                       return console.error('error running query',err);
                     }
@@ -66,7 +69,7 @@ app.get('/delphidata', function (req, res) {
                     client.end();
                     console.log("Client ended");
                   });
-  });*/
+  });
   
 });
 
