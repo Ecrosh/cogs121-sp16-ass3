@@ -152,7 +152,7 @@ function drugChart(data){
   var count = data.map(function (d){ return d.count; })
 
   var colour = d3.scale.linear()
-                .domain([1, 40])
+                .domain([1, 50])
                 .range(["#E8F0E8", "green"]);
 
   var i = 0;
