@@ -63,7 +63,7 @@ app.get('/delphidata', function (req, res) {
                     if(err){
                       return console.error('error running query',err);
                     }
-                    console.log(result.rows);
+                    //console.log(result.rows);
                     res.json(result.rows);
                   });
   });
