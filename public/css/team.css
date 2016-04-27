@@ -20,7 +20,7 @@ h1, h2, .center {
 
 .sectionTitles {
     font-size: 2em;
-    color:#000033;
+    color:white;
     font-style: normal;
     font-style: normal;
     font-weight: 200;
@@ -60,9 +60,24 @@ a:active {
     margin: 0;
 }
 
+#missionTitle {
+    position: relative;
+    top:-10%;
+    font-size: 3vw;
+    color: white;
+    font-style: normal;
+    font-weight: 200;
+    margin: 0;
+}
+
 #logoTag {
     position: relative;
     top:26%;
+}
+
+#missionTag {
+    position: relative;
+    top:-9%;
 }
 
 #navBar {
@@ -137,7 +152,7 @@ background: skyblue; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(left bottom, skyblue, deepskyblue); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(top right, skyblue, deepskyblue); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(top right, skyblue, deepskyblue); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to top right, skyblue, deepskyblue); /* Standard syntax (must be last) */
+    background: #3A3A3A; /* Standard syntax (must be last) */
     padding-top: 53px;
 }
 
