@@ -6,7 +6,9 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 
-html{
+html, body{
+    margin: 0;
+    padding: 0;
     font-family: Roboto Slab;
 }
 
@@ -36,34 +38,16 @@ a:link {
     padding-left: 60px;
     padding-right: 60px;
 }
-
+a:visited{
+    background-color:blue;
+}
 a:hover {
     color:#669999;
+    background-color: #FFF;
 }
 
 a:active {
-    color:#000033;
-}
-
-.home {
-    height:100vh;
-    background-image: url("/img/popo.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.about {
-    height:100vh;
-    background-color:green;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.graph {
-    height:100vh;
-    background-color:brown;
-    background-size: cover;
-    background-repeat: no-repeat;
+    color:#000;
 }
 
 #logoTitle {
@@ -91,20 +75,23 @@ a:active {
     border:solid;
     border-color:white;
     border-width: 1px;
-}
-
-body{
     margin:0;
+    padding:0;
+    z-index:100;
 }
 
 #graphSize {
-    width:100%;
-    height:70%;
+    height:100%;
+    position:absolute;
+    right:0px;
+    bottom:0px;
 }
 
 #toHome, #toAbout {
+    margin-right:-5px;
     display:inline-block;
     border-left:solid;
+    border-right:solid;
     border-width:1px;
     height:40px;
     padding-top:11px;
@@ -117,4 +104,74 @@ body{
     border-width:1px;
     height:40px;
     padding-top:11px;
+}
+
+ul#nav-clear li{
+    display:inline;
+    list-style-type: none;
+    width:100%;
+    margin:0;
+    padding:0;
+
+}
+
+#nav-clear{
+    padding:0;
+    margin:0;
+    position: relative;
+    left: 0;
+    width:100%;
+}
+
+#nav-container{
+    height:100%;
+}
+
+
+#inner-about{
+    position:absolute;
+    bottom: 0px;
+    width:100%;
+    height: calc(100% - 53px);
+background: skyblue; /* For browsers that do not support gradients */    
+    background: -webkit-linear-gradient(left bottom, skyblue, deepskyblue); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(top right, skyblue, deepskyblue); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(top right, skyblue, deepskyblue); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to top right, skyblue, deepskyblue); /* Standard syntax (must be last) */
+    padding-top: 53px;
+}
+
+#inner-graph{
+    position:absolute;
+    bottom: 0px;
+    width:100%;
+    height: calc(100% - 52px);
+    padding-top: 53px;
+ 
+    background: skyblue; /* For browsers that do not support gradients */    
+    background: -webkit-linear-gradient(left top, skyblue, deepskyblue); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, skyblue, deepskyblue); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, skyblue, deepskyblue); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, skyblue, deepskyblue); /* Standard syntax (must be last) */
+}
+
+.home {
+    height:100vh;
+    background-image: url("/img/popo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.about {
+    height:calc(100vh - 53px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position:relative;
+}
+
+.graph {
+    height:calc(100vh - 53px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position:relative;
 }

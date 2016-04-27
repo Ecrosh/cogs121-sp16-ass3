@@ -70,7 +70,6 @@ app.get('/delphidata', function (req, res) {
                     console.log("Client ended");
                   });
   });
-  
 });
 
 
