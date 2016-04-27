@@ -65,9 +65,8 @@ app.get('/delphidata', function (req, res) {
                     res.json(result.rows);
                     client.end();
                     console.log("Client ended");
-                  });
-  });*/
-  
+                  });*/
+  });
 });
 
 
