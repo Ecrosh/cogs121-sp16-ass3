@@ -91,7 +91,7 @@
 });
 
 })(d3);
-
+/*
 function delphiChart(data){
   var margin = {top: 20, right: 10, bottom: 100, left: 50},
       width = 960 - margin.right - margin.left,
@@ -145,7 +145,7 @@ function delphiChart(data){
     .append("g")
     .call(yAxis);
 }
-
+*/
 function drugChart(data){
   var margin = {top: 20, right: 10, bottom: 100, left: 50},
       width = 960 - margin.right - margin.left,
