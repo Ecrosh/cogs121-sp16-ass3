@@ -13,3 +13,7 @@
 	margin-left: auto;
   	margin-right: auto;
 }
+
+g path:hover, g polygon:hover{
+          fill: blue;
+        }

@@ -148,18 +148,21 @@ function delphiChart(data){
 */
 function drugChart(data){
 
-  var colour = d3.scale.linear()
-                .domain([10, 25])
-                .range(["lightblue", "red"]);
+  var zipCode = data.map(function (d){ return d.zip; });
+  var count = data.map(function (d){ return d.count; })
 
+  var colour = d3.scale.linear()
+                .domain([1, 40])
+                .range(["#E8F0E8", "green"]);
+
+  var i = 0;
   data.forEach(function(d){ //d is of form [id,value]
-    console.log("d[0] is...");
-    console.log(d[0]);
-    d3.select("g#"+d[0]) //select the group matching the id
-      .datum(d) //attach this data for future reference
+    d3.select("g#x_"+zipCode[i]) //select the group matching the id
+      //.datum(d) //attach this data for future reference
       .selectAll("path, polygon")
-      .datum(d) //attach the data directly to *each* shape
-      .attr("fill", d?colour(d[1]):"lightgray");
+      //.datum(d) //attach the data directly to *each* shape
+      .attr("fill", count[i]>0?colour(count[i]):"lightgray");
+    i++;
   });
 
   /*var margin = {top: 20, right: 10, bottom: 100, left: 50},
