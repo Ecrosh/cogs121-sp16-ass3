@@ -87,7 +87,7 @@
         return;
     }
     console.log("Data", data);
-    delphiChart(data);
+    drugChart(data);
 });
 
 })(d3);
@@ -147,7 +147,22 @@ function delphiChart(data){
 }
 */
 function drugChart(data){
-  var margin = {top: 20, right: 10, bottom: 100, left: 50},
+
+  var colour = d3.scale.linear()
+                .domain([10, 25])
+                .range(["lightblue", "red"]);
+
+  data.forEach(function(d){ //d is of form [id,value]
+    console.log("d[0] is...");
+    console.log(d[0]);
+    d3.select("g#"+d[0]) //select the group matching the id
+      .datum(d) //attach this data for future reference
+      .selectAll("path, polygon")
+      .datum(d) //attach the data directly to *each* shape
+      .attr("fill", d?colour(d[1]):"lightgray");
+  });
+
+  /*var margin = {top: 20, right: 10, bottom: 100, left: 50},
       width = 960 - margin.right - margin.left,
       height = 500 - margin.top - margin.bottom;
 
@@ -197,5 +212,5 @@ function drugChart(data){
 
     theChart
     .append("g")
-    .call(yAxis);
+    .call(yAxis);*/
 }

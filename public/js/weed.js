@@ -4,21 +4,21 @@ $(function() {
     var href = this.href;
     $('html, body').animate({
       scrollTop: $("#team-home").offset().top
-    }, 1300);
+    }, 1200);
   });
   $("#toGraph").on("click", function(event) {
     event.preventDefault();
     var href = this.href;
     $('html, body').animate({
       scrollTop: $("#team-graph").offset().top
-    }, 1300);
+    }, 1200);
   });         
   $("#toAbout").on("click", function(event) {
     event.preventDefault();
     var href = this.href;
     $('html, body').animate({
       scrollTop: ($("#team-about").offset().top - 53)
-    }, 1300);
+    }, 1200);
   });
 });
 
@@ -46,7 +46,6 @@ $(function() {
 //             leftVal+=2;
 
 //        $("#nav-clear").css("width", leftVal);
-      }
     }
     else{
       $("#navBar").css("position" ,"absolute");
