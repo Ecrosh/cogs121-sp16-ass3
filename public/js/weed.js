@@ -21,3 +21,12 @@ $(function() {
     }, 1000);
   });
 });
+
+window.onscroll = function (e) {
+/*  if(window.pageYOffset<50){//alert('stop') 
+    document.getElementById("navBar").style.position = "fixed";
+document.getElementById("navBar").style.bottom = "0"}
+ */// if(window.pageYOffset>410)
+ // 	    document.getElementById("navBar").style.position = "absolute";
+
+}
