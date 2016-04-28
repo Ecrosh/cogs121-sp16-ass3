@@ -16,6 +16,16 @@
 
 function drugChart(data){
 
+/*if(data == null){
+    d3.select("div#info")
+    d3.selectAll("g")
+    .on("mouseover", function(d,i) {
+        infoBox.html("Location <br><br><br> <span style=\"font-size: 50px\">Info Currently Not Available"
+         "</span> <br><br><br>Number of Marijuana Arrests<br><br><br><span style=\"font-size: 50px\"> Info Currently Not Available" +
+         "</span><br><br><br>ZipCode<br><br><span style=\"font-size: 50px\"> Info Currently Not Available" + "</span>");
+    });
+}*/
+
   var zipCode = data.map(function (d){ return d.zip; });
   var count = data.map(function (d){ return d.count; })
 

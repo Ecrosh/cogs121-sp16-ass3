@@ -15,7 +15,7 @@
 }
 
 g path:hover, g polygon:hover{
-          fill: blue;
+          fill: #345;
         }
 		
 g path.others:hover, g polygon.others:hover {
