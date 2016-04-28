@@ -104,9 +104,6 @@ a:active {
     bottom: 0;
     background-image:none;
     background-color:#345;
-    border:solid;
-    border-color:white;
-    border-width: 1px;
     margin:0;
     padding:0;
     z-index:100;
@@ -127,18 +124,12 @@ a:active {
 #toHome, #toAbout {
     margin-right:-5px;
     display:inline-block;
-    border-left:solid;
-    border-right:solid;
-    border-width:1px;
     height:40px;
     padding-top:11px;
 }
 
 #toGraph {
     display:inline-block;
-    border-left:solid;
-    border-right:solid;
-    border-width:1px;
     height:40px;
     padding-top:11px;
 }
