@@ -245,7 +245,7 @@ li {
     cursor:pointer;
 }
 
-@media screen and (max-width: 1160px) {
+@media screen and (max-width: 1105px) {
   li {
     visibility: hidden;
   }
