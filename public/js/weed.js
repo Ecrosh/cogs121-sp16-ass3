@@ -31,12 +31,12 @@ $(function() {
     var scrollPos =  $(window).scrollTop();
     if((navOffset<=scrollPos)) {
       $("#navBar").css("position" ,"fixed");
-  	  $("#navBar").css("top" ,"0");
+      $("#navBar").css("top" ,"0");
       $("#navBar").css("bottom", "auto");
     }
     else{
       $("#navBar").css("position" ,"absolute");
-  	  $("#navBar").css("top" ,"auto");
+      $("#navBar").css("top" ,"auto");
       $("#navBar").css("bottom", "0");
     }
   });
