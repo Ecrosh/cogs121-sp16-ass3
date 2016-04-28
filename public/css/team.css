@@ -244,3 +244,9 @@ ul#nav-clear li{
 li {
     cursor:pointer;
 }
+
+@media screen and (max-width: 1160px) {
+  li {
+    visibility: hidden;
+  }
+}
