@@ -70,8 +70,8 @@ function drugChart(data){
 		else{
 			location = "Not Available";
 			}
-         infoBox.html("Location <span style=\"font-size: 50px\"> <br>"+ location+
-		 "</span> <br><br><br>Number of Weed Arrests<br><br><br><span style=\"font-size: 50px\">" + count[i] +
+         infoBox.html("Location <br><br><br> <span style=\"font-size: 50px\">"+ location+
+		 "</span> <br><br><br>Number of Marijuana Arrests<br><br><br><span style=\"font-size: 50px\">" + count[i] +
 		 "</span><br><br><br>ZipCode<br><br><span style=\"font-size: 50px\">" +zipCode[i] + "</span>"); //print the associated data
   });
 
