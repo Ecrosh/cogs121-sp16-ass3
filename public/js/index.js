@@ -164,6 +164,14 @@ function drugChart(data){
       .attr("fill", count[i]>0?colour(count[i]):"lightgray");
     i++;
   });
+  
+$('.precinct').tipsy({
+    gravity: $.fn.tipsy.autoNS,
+    title: function() {
+        //alert("here");
+        return 'Hi there!';
+    }
+});
 
   var infoBox = d3.select("div#info");
   d3.selectAll("g.region")
@@ -171,55 +179,237 @@ function drugChart(data){
          infoBox.html("<strong>" + d[0] + ": </strong>" + d[1] ); //print the associated data
   });
 
-  /*var margin = {top: 20, right: 10, bottom: 100, left: 50},
-      width = 960 - margin.right - margin.left,
-      height = 500 - margin.top - margin.bottom;
+  
+$('#laJolla').tipsy({
+    gravity: $.fn.tipsy.autoNS,
+    title: function() {
+        //alert("here");
+        return 'La Jolla';
+    }
+});
+ 
+$('#downTown').tipsy({
+    gravity: $.fn.tipsy.autoNS,
+    title: function() {
+        //alert("here");
+        return 'Downtown';
+    }
+});
+ 
+$('#southPark').tipsy({
+    gravity: $.fn.tipsy.autoNS,
+    title: function() {
+        //alert("here");
+        return 'South Park';
+    }
+});
+ 
+$('#hillCrest').tipsy({
+    gravity: $.fn.tipsy.autoNS,
+    title: function() {
+        //alert("here");
+        return 'Hillcrest';
+    }
+});
+ 
+$('#northPark').tipsy({
+    gravity: $.fn.tipsy.autoNS,
+    title: function() {
+        //alert("here");
+        return 'North Park';
+    }
+});
+ 
+$('#cityHeights').tipsy({
+    gravity: $.fn.tipsy.autoNS,
+    title: function() {
+        //alert("here");
+        return 'City Heights';
+    }
+});
+ 
+$('#pointLoma').tipsy({
+    gravity: $.fn.tipsy.autoNS,
+    title: function() {
+        //alert("here");
+        return 'Point Loma';
+    }
+});
+ 
+$('#oceanBeach').tipsy({
+    gravity: $.fn.tipsy.autoNS,
+    title: function() {
+        //alert("here");
+        return 'Ocean Beach';
+    }
+});
+ 
+$('#missionValley').tipsy({
+    gravity: $.fn.tipsy.autoNS,
+    title: function() {
+        //alert("here");
+        return 'Mission Valley';
+    }
+});
+ 
+$('#pacificBeach').tipsy({
+    gravity: $.fn.tipsy.autoNS,
+    title: function() {
+        //alert("here");
+        return 'Pacific Beach';
+    }
+});
+ 
+$('#oldTown').tipsy({
+    gravity: $.fn.tipsy.autoNS,
+    title: function() {
+        //alert("here");
+        return 'Old Town';
+    }
+});
+ 
+$('#kearnyMesa').tipsy({
+    gravity: $.fn.tipsy.autoNS,
+    title: function() {
+        //alert("here");
+        return 'Kearny Mesa';
+    }
+});
+ 
+$('#loganHeights').tipsy({
+    gravity: $.fn.tipsy.autoNS,
+    title: function() {
+        //alert("here");
+        return 'Logan Heights';
+    }
+});
+ 
+$('#encanto').tipsy({
+    gravity: $.fn.tipsy.autoNS,
+    title: function() {
+        //alert("here");
+        return 'Encanto';
+    }
+});
+ 
+$('#sanDiegoState').tipsy({
+    gravity: $.fn.tipsy.autoNS,
+    title: function() {
+        //alert("here");
+        return 'San Diego State';
+    }
+});
+ 
+$('#universityHeights').tipsy({
+    gravity: $.fn.tipsy.autoNS,
+    title: function() {
+        //alert("here");
+        return 'University Heights';
+    }
+});
+ 
+$('#northClairemont').tipsy({
+    gravity: $.fn.tipsy.autoNS,
+    title: function() {
+        //alert("here");
+        return 'North Clairemont';
+    }
+});
+ 
+$('#missionTrails').tipsy({
+    gravity: $.fn.tipsy.autoNS,
+    title: function() {
+        //alert("here");
+        return 'Mission Trails';
+    }
+});
+ 
+$('#alliedGardens').tipsy({
+    gravity: $.fn.tipsy.autoNS,
+    title: function() {
+        //alert("here");
+        return 'Allied Gardens';
+    }
+});
+ 
+$('#sorrentoValley').tipsy({
+    gravity: $.fn.tipsy.autoNS,
+    title: function() {
+        //alert("here");
+        return 'Sorrento Valley';
+    }
+});
+ 
+$('#universityCity').tipsy({
+    gravity: $.fn.tipsy.autoNS,
+    title: function() {
+        //alert("here");
+        return 'University City';
+    }
+});
+ 
+$('#serraMesa').tipsy({
+    gravity: $.fn.tipsy.autoNS,
+    title: function() {
+        //alert("here");
+        return 'Serra Mesa';
+    }
+});
+ 
+$('#tierraSanta').tipsy({
+    gravity: $.fn.tipsy.autoNS,
+    title: function() {
+        //alert("here");
+        return 'Tierra Santa';
+    }
+});
+ 
+$('#miraMesa').tipsy({
+    gravity: $.fn.tipsy.autoNS,
+    title: function() {
+        //alert("here");
+        return 'Mira Mesa';
+    }
+});
+ 
+$('#carmelValley').tipsy({
+    gravity: $.fn.tipsy.autoNS,
+    title: function() {
+        //alert("here");
+        return 'Carmel Valley';
+    }
+});
+ 
+$('#scrippsRanch').tipsy({
+    gravity: $.fn.tipsy.autoNS,
+    title: function() {
+        //alert("here");
+        return 'Scripps Ranch';
+    }
+});
+ 
+$('#paradiseHills').tipsy({
+    gravity: $.fn.tipsy.autoNS,
+    title: function() {
+        //alert("here");
+        return 'Paradise Hills';
+    }
+});
 
-  var innerWidth  = width  - margin.left - margin.right;
-  var innerHeight = height - margin.top  - margin.bottom;
+$('#marineCorps').tipsy({
+    gravity: $.fn.tipsy.autoNS,
+    title: function() {
+        //alert("here");
+        return 'Marine Corps';
+    }
+});
+$('.other').tipsy({
+    gravity: $.fn.tipsy.autoNS,
+    title: function() {
+        //alert("here");
+        return 'Data Not Available';
+    }
+});  
+  
 
-  // TODO: Input the proper values for the scales
-  var xScale = d3.scale.ordinal().rangeRoundBands([0, innerWidth], 0.1);
-  var yScale = d3.scale.linear().range([0, innerHeight]);
-
-  var theChart = d3
-                .select(".theChart")
-                .append("svg")
-                .attr("width", width + margin.right + margin.left)
-                .attr("height", height + margin.top + margin.bottom)
-                .append("g")
-                .attr("transform", "translate(" +  margin.left + "," + margin.right + ")");
-
-    xScale.domain(data.map(function (d){ return d.gender; }));
-    yScale.domain([9000, 0]);
-
-    var range = d3.max( data.map(function(d){ return d.number_of_respondents; }) );
-
-    theChart
-    .selectAll(".bar")
-    .data(data.map(function (d){ return d.number_of_respondents; }))
-    .enter().append("rect")
-    .attr("class", "bar")
-    .attr("x", function(d, i) { return i*(innerWidth/Object.keys(data).length); })
-    .attr("width", 250)
-    .attr("y", function(d) { return innerHeight-(innerHeight*(d/range)); })
-    .attr("height", function(d) { return innerHeight*(d/range); });
-
-    // Orient the x and y axis
-    var xAxis = d3.svg.axis().scale(xScale).orient("bottom");
-    var yAxis = d3.svg.axis().scale(yScale).orient("left");
-
-    theChart
-    .append("g")
-    .call(xAxis)
-    .attr("transform", "translate( 0," + innerHeight + ")")
-    .selectAll("text")
-      .style("text-anchor", "end")
-      .attr("dx", "-.9em")
-      .attr("dy", ".5em")
-      .attr("transform", "rotate(-45)" );;
-
-    theChart
-    .append("g")
-    .call(yAxis);*/
 }
