@@ -88,12 +88,11 @@ a:active {
 #missionTag2 {
     position: relative;
     font-family: 'Open Sans';
-    padding-top:3%;
     color:white;
     left:30%;
     width:50%;
-    font-size: 20px;
-    line-height: 1.8;
+    font-size: 18px;
+    line-height: 1.5;
     margin:0;
 }
 
