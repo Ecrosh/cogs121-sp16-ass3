@@ -18,6 +18,10 @@ g path:hover, g polygon:hover{
           fill: blue;
         }
 		
+g path.others:hover, g polygon.others:hover {
+          fill: grey !important;
+}
+
 g path.other:hover, g polygon.other:hover {
           fill: grey !important;
 }
