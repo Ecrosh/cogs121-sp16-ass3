@@ -158,9 +158,10 @@ function drugChart(data){
   var i = 0;
   data.forEach(function(d){ //d is of form [id,value]
     d3.select("g#x_"+zipCode[i]) //select the group matching the id
-      //.datum(d) //attach this data for future reference
+      .datum(d) //attach this data for future reference
+      .classed("region", true)
       .selectAll("path, polygon")
-      //.datum(d) //attach the data directly to *each* shape
+      .datum(d) //attach the data directly to *each* shape
       .attr("fill", count[i]>0?colour(count[i]):"lightgray");
     i++;
   });
@@ -173,6 +174,13 @@ $('.precinct').tipsy({
     }
 });
 
+  var infoBox = d3.select("div#info");
+  d3.selectAll("g.region")
+  .on("mouseover", function(d,i) {
+         infoBox.html("<span style=\"font-size: 50px\">" + count[i] + "</span><br><br><br>ZipCode<br><br><span style=\"font-size: 50px\">" + zipCode[i] + "</span>"); //print the associated data
+  });
+
+  
 $('#laJolla').tipsy({
     gravity: $.fn.tipsy.autoNS,
     title: function() {

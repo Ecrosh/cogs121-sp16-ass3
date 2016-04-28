@@ -25,3 +25,7 @@ g path.others:hover, g polygon.others:hover {
 g path.other:hover, g polygon.other:hover {
           fill: grey !important;
 }
+
+g path.others:hover, g polygon.others:hover {
+          fill: grey !important;
+}
