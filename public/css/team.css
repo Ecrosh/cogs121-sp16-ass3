@@ -209,3 +209,7 @@ ul#nav-clear li{
     background-repeat: no-repeat;
     position:relative;
 }
+
+#scale{
+    width: 50%;
+}

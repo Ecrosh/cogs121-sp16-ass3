@@ -165,6 +165,12 @@ function drugChart(data){
     i++;
   });
 
+  var infoBox = d3.select("div#info");
+  d3.selectAll("g.region")
+  .on("click", function(d,i) {
+         infoBox.html("<strong>" + d[0] + ": </strong>" + d[1] ); //print the associated data
+  });
+
   /*var margin = {top: 20, right: 10, bottom: 100, left: 50},
       width = 960 - margin.right - margin.left,
       height = 500 - margin.top - margin.bottom;
