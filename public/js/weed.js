@@ -26,32 +26,23 @@ $(function() {
 	 
 $(function() {
   var navOffset = $("#navBar").offset().top;
-//  var leftVal = 0;
-
-
 
   $(window).scroll(function(){
-  	var scrollPos =  $(window).scrollTop();
-
-   // alert(scrollPos);
-    // while scrolling down
+    var scrollPos =  $(window).scrollTop();
     if((navOffset<=scrollPos)) {
       $("#navBar").css("position" ,"fixed");
   	  $("#navBar").css("top" ,"0");
       $("#navBar").css("bottom", "auto");
-      //shift right
-      //alert($(window).width());
-//      if(leftVal != $(window).width()) {
-//        $("#nav-clear").css("left", leftVal+=7);
-//             leftVal+=2;
-
-//        $("#nav-clear").css("width", leftVal);
     }
     else{
       $("#navBar").css("position" ,"absolute");
   	  $("#navBar").css("top" ,"auto");
       $("#navBar").css("bottom", "0");
-//    $("#nav-clear").css("width", leftVal);
     }
   });
 });
+
+function siren() {
+  var audio = new Audio('/audio/police1.wav');
+  audio.play();
+}

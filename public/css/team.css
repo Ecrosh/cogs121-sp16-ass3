@@ -106,11 +106,15 @@ a:active {
     margin:0;
     padding:0;
     z-index:100;
+    border-style: solid none;
+    border-top-width:0px;
+    border-bottom-width:1px;
+    border-color: #345;
 }
 #imgShrink{
     width: 30%;
     position: relative;
-    padding-top: 3%;
+    padding-top: 70px;
 }
 
 #graphSize {
@@ -179,8 +183,8 @@ ul#nav-clear li{
     position:absolute;
     bottom: 0px;
     width:100%;
-    height: calc(100% - 54px);
-    padding-top: 53px;
+    height: calc(100% - 53px);
+    padding-top: 54px;
  
     background: skyblue; /* For browsers that do not support gradients */    
     background: -webkit-linear-gradient(left top, skyblue, deepskyblue); /* For Safari 5.1 to 6.0 */
@@ -212,4 +216,31 @@ ul#nav-clear li{
 
 #scale{
     width: 50%;
+}
+
+#reportNumRight{
+    font-size:26px;
+    position: absolute;
+    right: 0px;
+    padding: 6px 20px 0px 30px;
+    height: 46px;
+    color: #FFF;
+    background: -webkit-linear-gradient(left, #345, #C41500);
+}
+
+#reportNumLeft{
+    font-size:26px;
+    position: absolute;
+    left: 0px;
+    padding: 6px 20px 0px 20px;
+    height: 46px;
+    color: #FFF;
+    width:244px;
+    background: -webkit-linear-gradient(left, #C41500, #345);
+}
+#numColor{
+    color:deepskyblue;
+}
+li {
+    cursor:pointer;
 }
