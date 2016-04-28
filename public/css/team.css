@@ -241,7 +241,8 @@ ul#nav-clear li{
 #numColor{
     color:deepskyblue;
 }
-li {
+
+li+span {
     cursor:pointer;
 }
 
