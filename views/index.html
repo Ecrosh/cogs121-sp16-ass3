@@ -19,24 +19,27 @@
 
     <section id="team-about" class="about">
       <div id="inner-about">
-        <h3 id="missionTitle" class="center sectionTitles">Our Mission:</h3><!-- unknown tag found here -->
-        <p id="missionTag" class="center">To help law enforcement sniff out dat 
-      	<span style="color: green">weed</span>.</p>
-      	<br>
-      	<center> 
-      		<img id="imgShrink" src = "/img/america.jpg">
-      	</center>
-      	<p id="missionTag2"> Our interactive graph acts as a suggestive tool for police officers to use when deciding where to patrol. The data that drives this graph, is backed by publicly recorded information gathered from previous arrests. This graph is deliberately designed to help officers find dat <span style="color: green">weed</span> in the most efficient and calculated way possible.
+        <h3 id="missionTitle" class="center sectionTitles">Our Mission</h3><!-- unknown tag found here -->
+        <div class="leftAbout">
+	        <p id="missionTag" >To help law enforcement sniff out 
+	      	<span style="color: green">weed</span>.</p>
+
+	      	
+	      	<p id="missionTag2"> Our interactive graph acts as a suggestive tool for police officers to use when deciding where to patrol for marijuana violations in San Diego County. This graph is deliberately designed to help officers track down <span style="color: green">weed</span> users in the most efficient and calculated way possible. Data from previous arrests have allowed us to quantify each location on the map with a specific count of how many <span style="color: green">weed</span> arrests were found at each spot. So using our graphs is simple as 1,2,3.<br><br>
+	      		1. Hover over a location you want to observe<br> 2. Check the <span style="color: green">weed</span> count<br>3. Choose the most efficient patrol route based on the counts observed</p>
+
+      	</div>
+      	<img id="imgShrink" src = "/img/sdFam.jpg">
 
       </div>
     </section>
 
     <section id="team-graph" class="graph">
       <div id="inner-graph">
-        <h3 class="center sectionTitles">Weed Data</h3>
-
-
-        <center>Weed graph goes here!</center>
+      	<div class="leftAbout">
+	        <h3 class="center sectionTitles">San Diego County Marijuana Arrests</h3>
+	        <center>Hover over each region to see more info!</center>
+    	</div>
         
         <svg id="graphSize" version="1.1" baseProfile="basic" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
 	 	y="0px" viewBox="0 0 1657 1767.667" xml:space="preserve">
@@ -246,6 +249,7 @@
 			<polygon id="marineCorps" fill="#E8F0E8" stroke="#000000" stroke-miterlimit="10" points="433,1257.333 442,1288.667 439.334,1304 448.334,1298 
 				452,1284.334 527,1307 546.334,1279 558.667,1285 561.334,1280.512 572.334,1262 565.334,1269.667 502.667,1237.098 	"/>
 		</g>
+
 		<g id="Other">
 			<path class="others" fill="grey" stroke="#000000" stroke-miterlimit="10" d="M1657,21v1746.667H682c0,0-139-237.667-326-140.667
 				c0,0-79.063-110.968,59-183c69-36,131,11,131,11l-9.659,30.667L582,1503.334l-2,4.666l72,30c0,0,25,22,20,36l8.976,1.667
@@ -267,12 +271,14 @@
 				c0,0,1-13.75-1-13s23.25-1,23.25-1L1066,326.5l17,0.25l-4-7.75l15.75-5.5l1.25-7.25l10-0.75l-0.25-13.5l44.5-0.25l0.25-11
 				l47.5-0.25V271h23l1-16.75l4-16.25l8.75-0.75l-2-6.25l2.5-5l-6.25-7.75l-6.5,8.75l1-18.25l4.75-5.75l-1-5l10.75-19.25l-8-14.5
 				l-4-0.75l-3.75-4.25l3.25-7.75l-3.75-6.75l132.25-0.5l18,7.75l234.75-0.75l-0.25-87.75l36-4l-8.5-11.75l1-9.5l15-14.75L1657,21z"/>
+
 			<path class="others" fill="grey" stroke="#000000" stroke-miterlimit="10" d="M1657,21V0H160l3.5,15l5.5,4l-1,9l4,12l8,5l8.75-8
 				c0,0,8.5,16.75,64.25,34.25L276,63l-7-61.25l473.25-0.5L745,15l-5,9.25l4.5,14.5l18.75-9.5l40,0.75l7.25,4.25L826.75,38l6.75-8
 				l26.5-5.75V20l10.5-5l13,28.25l-1.5,3L896.25,49L902,59.75l18.75,9.75l22.945,1.75c0,0,3.555-10,3.305-9.25s7.5,4.25,7.5,4.25
 				s17-62.75,20-64.5l42.5-0.5l0.25,4.25L1062,6v21.75l60.75,0.25l17.75,22.75l57.5,1.5l0.25,46.75l44.25-0.5l-0.5-20.25l13,20.5
 				l5-6.25l5.75,0.5l0.5,9.5L1284,108l51.5-0.5l-0.75-6.5H1353l9-6l12,3l6.75-9L1408,78.25l9-7l41.25-9.75L1474.5,41l13.5-2.25
 				l0.25-8.75l6.75-15h12l28.75-14L1564,0.75l15,8.75l43.25-1L1642.5,9l10,6.5L1657,21z"/>
+
 			<path class="other" fill="grey" stroke="#000000" stroke-miterlimit="10" d="M225.333,315c0,0,0.329,0.244,0.934,0.667
 				c5.948,4.153,38.533,25.539,46.4,1.333l34.207,11.354L320.667,341l26,7.333l-8,64c0,0-13.641,8.667-25.82,0l1.82,10.667l6.667,4
 				l1.333,6.667h6l2,6l-46,4.667c0,0-20.667,13.333-22,10.667s-8-14.667-8-14.667l3.333-98L226.667,331L225.333,315z"/>
