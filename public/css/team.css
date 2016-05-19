@@ -18,171 +18,29 @@ h1, h2, .center {
     margin:0;
 }
 
-.sectionTitles {
-    font-size: 2em;
-    color:white;
-    font-family: 'Amaranth', sans-serif;
-    font-style: normal;
-    font-weight: 200;
-}
-
 i {
     font-size: 30px;
     color:#FFF;
 }
 
-a:visited{
-    background-color:blue;
-}
-
-
-
-a:active {
-    color:#000;
-}
-
-
-#missionTitle {
-    position: relative;
-    font-size: 5vw;
-    color: white;
-    font-style: normal;
-    font-weight: 200;
-    margin: 0;
-}
-
-
-
-#missionTag {
-    font-family: 'Roboto Slab';
-    position: relative;
-    font-size:25px;
-    padding-top:15px;
-    padding-bottom: 8px;
-    color:white;
-    left:20%;
-    width: 65%;
-}
-
-#missionTag2 {
-    position: relative;
-    font-family: 'Open Sans';
-    color:white;
-    left:20%;
-    width:65%;
-    font-size: 90%;
-    line-height: 1.5;
-    margin:0;
-}
-
-
-#imgShrink{
-    width: 40%;
-    position: relative;
-    padding-top: 70px;
-}
-
-
-#toHome, #toAbout {
-    margin-right:-5px;
-    display:inline-block;
-    height:40px;
-    padding-top:11px;
-}
-
-#toGraph {
-    display:inline-block;
-    height:40px;
-    padding-top:11px;
-}
-
-#nav-container{
-    height:100%;
-}
-
-
-#inner-about{
-    position:absolute;
-    bottom: 0px;
-    width:100%;
-    height: calc(100% - 53px);
-    padding-top: 53px;
-}
-
-.leftAbout{
-    padding-top: 1%;
-    width: 50%;
-    left: 50%;
-    float: left;
-}
-
-
-#inner-graph{
-    position:absolute;
-    bottom: 0px;
-    width:100%;
-    height: calc(100% - 53px);
-    padding-top: 54px;
- 
-    background: skyblue; /* For browsers that do not support gradients */    
-    background: -webkit-linear-gradient(left top, skyblue, deepskyblue); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(bottom right, skyblue, deepskyblue); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(bottom right, skyblue, deepskyblue); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to bottom right, skyblue, deepskyblue); /* Standard syntax (must be last) */
-}
-
-/*
-#scale{
-    width: 50%;
-}
-
-#reportNumRight{
-    font-size:26px;
-    position: absolute;
-    right: 0px;
-    padding: 6px 20px 0px 30px;
-    height: 46px;
-    color: #FFF;
-}
-
-#reportNumLeft{
-    font-size:26px;
-    position: absolute;
-    left: 0px;
-    padding: 6px 20px 0px 20px;
-    height: 46px;
-    color: #FFF;
-    width:244px;
-}
-
-#numColor{
-    color:deepskyblue;
-}
-
-.graph {
-    height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position:relative;
-}*/
-
-
-
 /*------------------------------*/
 
 /* MODERATION PAGE */
 .mod {
-    height: 100vh;
+    height: calc(100vh - 56px);
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url("/img/mod.png");
+    /* temporary border */
+    border-top: solid;
+    border-color: #413639;
 }
 
 /*------------------------------*/
 
 /* RISK PAGE */
 .risk {
-    height: 100vh;
+    height: calc(100vh - 56px);
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url("/img/risk.png");
@@ -192,17 +50,16 @@ a:active {
 
 /* DANGER PAGE */
 .danger {
-    height: 100vh;
+    height: calc(100vh - 56px);
     background-size: cover;
     background-repeat: no-repeat;
     background-color: skyblue;
 }
 
 .dangerGraph {
-    padding-top: 56px;
+    height: calc(100vh - 56px);
     position:relative;
     float:right;
-    height: calc(100% - 56px);
 }
 
 
@@ -210,7 +67,7 @@ a:active {
 
 /* ABOUT PAGE */
 .about {
-    height: 100vh;
+    height: calc(100vh - 56px);
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url("/img/wood.png");
@@ -248,7 +105,8 @@ a:active {
     position: relative;
     top:14%;
     color: white;
-    padding: 75px 30% 75px 30%;
+    padding: 40px 30% 75px 30%;
+    font-size: 20px;
 }
 
 /*------------------------------*/
@@ -261,12 +119,15 @@ a:active {
     background-repeat: no-repeat;
 }
 
+/*------------------------------*/
+
 /* Position of nav bar */
 .nav-bar-pos {
     z-index: 100;
     position: fixed;
     right: 0;
     left: 0;
+    top: 0;
     background-color: #413639;
     margin: 0;
     padding: 0;
@@ -342,5 +203,3 @@ a:active {
     position: relative;
     top:26%;
 }
-
-/*------------------------------*/
