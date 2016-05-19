@@ -21,44 +21,26 @@ h1, h2, .center {
 .sectionTitles {
     font-size: 2em;
     color:white;
-    font-style: normal;
+    font-family: 'Amaranth', sans-serif;
     font-style: normal;
     font-weight: 200;
 }
 
 i {
     font-size: 30px;
-    color:#EEE;
+    color:#FFF;
 }
 
-a:link {
-    text-decoration: none;
-    font-size: 20px;
-    color:#FFF;
-    padding-left: 60px;
-    padding-right: 60px;
-}
 a:visited{
     background-color:blue;
 }
-a:hover {
-    color:#669999;
-    background-color: #FFF;
-}
+
+
 
 a:active {
     color:#000;
 }
 
-#logoTitle {
-    position: relative;
-    top:25%;
-    font-size: 10vw;
-    color: white;
-    font-style: normal;
-    font-weight: 200;
-    margin: 0;
-}
 
 #missionTitle {
     position: relative;
@@ -69,10 +51,7 @@ a:active {
     margin: 0;
 }
 
-#logoTag {
-    position: relative;
-    top:26%;
-}
+
 
 #missionTag {
     font-family: 'Roboto Slab';
@@ -96,33 +75,13 @@ a:active {
     margin:0;
 }
 
-#navBar {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image:none;
-    background-color:#413639;
-    margin:0;
-    padding:0;
-    z-index:100;
-    border-style: solid none;
-    border-top-width:0px;
-    border-bottom-width:1px;
-    border-color: #345;
-}
+
 #imgShrink{
     width: 40%;
     position: relative;
     padding-top: 70px;
 }
 
-#graphSize {
-    height:100%;
-    position:absolute;
-    right:0px;
-    bottom:0px;
-}
 
 #toHome, #toAbout {
     margin-right:-5px;
@@ -137,23 +96,6 @@ a:active {
     padding-top:11px;
 }
 
-ul#nav-clear li{
-    display:inline;
-    list-style-type: none;
-    width:100%;
-    margin:0;
-    padding:0;
-
-}
-
-#nav-clear{
-    padding:0;
-    margin:0;
-    position: relative;
-    left: 0;
-    width:100%;
-}
-
 #nav-container{
     height:100%;
 }
@@ -164,7 +106,6 @@ ul#nav-clear li{
     bottom: 0px;
     width:100%;
     height: calc(100% - 53px);
-    background-image: url("/img/wood.png");
     padding-top: 53px;
 }
 
@@ -174,6 +115,7 @@ ul#nav-clear li{
     left: 50%;
     float: left;
 }
+
 
 #inner-graph{
     position:absolute;
@@ -189,27 +131,7 @@ ul#nav-clear li{
     background: linear-gradient(to bottom right, skyblue, deepskyblue); /* Standard syntax (must be last) */
 }
 
-.home {
-    height:100vh;
-    background-image: url("/img/grave.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.about {
-    height:calc(100vh - 53px);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position:relative;
-}
-
-.graph {
-    height:calc(100vh - 53px);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position:relative;
-}
-
+/*
 #scale{
     width: 50%;
 }
@@ -232,16 +154,193 @@ ul#nav-clear li{
     color: #FFF;
     width:244px;
 }
+
 #numColor{
     color:deepskyblue;
 }
 
-li+span {
-    cursor:pointer;
+.graph {
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position:relative;
+}*/
+
+
+
+/*------------------------------*/
+
+/* MODERATION PAGE */
+.mod {
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("/img/mod.png");
 }
 
-@media screen and (max-width: 1105px) {
-  li {
-    visibility: hidden;
-  }
+/*------------------------------*/
+
+/* RISK PAGE */
+.risk {
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("/img/risk.png");
 }
+
+/*------------------------------*/
+
+/* DANGER PAGE */
+.danger {
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: skyblue;
+}
+
+.dangerGraph {
+    padding-top: 56px;
+    position:relative;
+    float:right;
+    height: calc(100% - 56px);
+}
+
+
+/*------------------------------*/
+
+/* ABOUT PAGE */
+.about {
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("/img/wood.png");
+}
+
+/* Position of about title */
+.aboutTitle {
+    position: relative;
+    top:15%;
+    font-size: 5vw;
+    color: white;
+    font-family: 'Amaranth', sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    margin: 0;
+    padding: 0;
+}
+
+/* Position of second about title */
+.aboutTitle2 {
+    position: relative;
+    top: 15%;
+    font-size: 5vw;
+    color: white;
+    font-family: 'Amaranth', sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    margin: 0;
+    padding: 0;
+}
+
+/* Description for title*/
+.aboutTag {
+    font-family: 'Open Sans';
+    position: relative;
+    top:14%;
+    color: white;
+    padding: 75px 30% 75px 30%;
+}
+
+/*------------------------------*/
+
+/* HOME PAGE */
+.home {
+    height: 100vh;
+    background-image: url("/img/grave.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Position of nav bar */
+.nav-bar-pos {
+    z-index: 100;
+    position: absolute;
+    right: 0;
+    left: 0;
+    background-color: #413639;
+    margin: 0;
+    padding: 0;
+}
+
+/* Position of nav bar contents */
+.nav-bar {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    left: 0;
+    width:100%;
+}
+
+/* remove default style within nav bar*/
+.nav-bar li{
+    display:inline;
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+
+/* Contents within nav Bar */
+.nav-bar li a {
+    height: 56px;
+    display: flex;
+    align-items: center;
+}
+
+/* Nav padding, font style */
+.nav-bar li a:link {
+    text-decoration: none;
+    color:#FFF;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+/* Hover nav bar tab */
+.nav-bar li a:hover {
+    color:#413639;
+    background-color: #FFF;
+}
+
+/* Position left tabs */
+.left-tab {
+    float: left;
+    font-family: 'Cherry Swash', cursive;
+    font-size: 30px;
+}
+
+/* Position right tabs */
+.right-tab {
+    float: right;
+    font-family: 'Amaranth', sans-serif;
+    font-size: 25px;
+}
+
+/* Home page title */
+.logoTitle {
+    position: relative;
+    top:25%;
+    font-size: 10vw;
+    color: white;
+    font-family: 'Cherry Swash', cursive;
+    font-style: normal;
+    font-weight: 200;
+    margin: 0;
+}
+
+/* Description for title*/
+.logoTag {
+    font-family: 'Cherry Swash', cursive;
+    position: relative;
+    top:26%;
+}
+
+/*------------------------------*/

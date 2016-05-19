@@ -4,52 +4,58 @@
 <body>
 
     <section id="team-home" class="home">
-       <h1 id="logoTitle" class="center">Alcoholla</h1>
-       <p id="logoTag" class="center"><i>Think before you drink</i></p>
-       <br/>
-         <nav id="navBar" class="center">
-           <ul id="nav-clear">
-             <li><a id="toHome" href="#team-home">HOME</a></li>
-             <li><a id="toAbout" href="#team-about">ABOUT</a></li>
-             <li><a id="toGraph" href="#team-graph">GRAPH</a></li>
-             <span id="reportNumRight" onclick="siren()">Call <span id="numColor">911</span> to Report</span>
-	     <span id="reportNumLeft"></span>
-
-           </ul>
-         </nav>
+      <nav class="nav-bar-pos">
+        <ul class="nav-bar">
+          <li><a class="left-tab" href="#team-home">Alcojolla</a></li>
+          <li><a class="right-tab" href="#team-mod">Moderation</a></li>
+          <li><a class="right-tab" href="#team-risk">Your Risk</a></li>
+          <li><a class="right-tab" href="#team-danger">The Danger</a></li>
+          <li><a class="right-tab" href="#team-about">About</a></li>
+        </ul>
+      </nav>
+      <h1 class="logoTitle center">Alcojolla</h1>
+      <p class="logoTag center"><i>Think before you drink.</i></p>
     </section>
 
 
     <section id="team-about" class="about">
-      <div id="inner-about">
-        <h3 id="missionTitle" class="center sectionTitles">Our Mission</h3><!-- unknown tag found here -->
-        <div class="leftAbout">
-	        <p id="missionTag" >To help law enforcement sniff out 
-	      	<span style="color: #66b266">weed</span>.</p>
+      <nav class="nav-bar-pos">
+        <ul class="nav-bar">
+          <li><a class="left-tab" href="#team-home">Alcojolla</a></li>
+          <li><a class="right-tab" href="#team-mod">Moderation</a></li>
+          <li><a class="right-tab" href="#team-risk">Your Risk</a></li>
+          <li><a class="right-tab" href="#team-danger">The Danger</a></li>
+          <li><a class="right-tab" href="#team-about">About</a></li>
+        </ul>
+      </nav>
+      <h3 class="aboutTitle center">About Us</h3>
+      <p class="aboutTag center">Hammock bitters selfies authentic shabby chic ethicali. 8-bit chartreuse small batch ramps.
+      Wayfarers man bun direct trade post-ironic meggings, kitsch retro vegan green juice kinfolk jean shorts ramps occupy
+      thundercats humblebrag. Yuccie shabby chic direct trade, mumblecore gentrify post-ironic kogi tofu.
+      </p>
+      
+      <h3 class="aboutTitle2 center">Did you know...?</h3>
+      <p class="aboutTag center">Hammock bitters selfies authentic shabby chic ethicali. 8-bit chartreuse small batch ramps.
+      Wayfarers man bun direct trade post-ironic meggings, kitsch retro vegan green juice kinfolk jean shorts ramps occupy
+      thundercats humblebrag. Yuccie shabby chic direct trade, mumblecore gentrify post-ironic kogi tofu.
+      </p>
 
-	      	
-	      	<p id="missionTag2"> Our interactive graph acts as a suggestive tool for police officers to use when deciding where to patrol for marijuana violations in San Diego County. This graph is deliberately designed to help officers track down weed users in the most efficient and calculated way possible. Data from previous arrests have allowed us to quantify each location on the map with a specific count of how many weed arrests were found at each spot. So using our graphs is simple as 1,2,3.<br><br>
-	      		1. Hover over a location you want to observe<br> 2. Check the weed count<br>3. Choose the most efficient patrol route based on the counts observed</p>
-
-      	</div>
-      	<img id="imgShrink" src = "/img/sdFam.jpg">
-
-      </div>
     </section>
 
-    <section id="team-graph" class="graph">
-      <div id="inner-graph">
-      	<div class="leftAbout">
-	        <h3 class="center sectionTitles">San Diego County Marijuana Arrests of 2013-2014</h3>
-	        <center>Hover over each region to see more info!<br><br><br>
 
-	    	<div id="info"></div><br><br>
-	    	<img id="scale" src="/img/scale.png">
-	    	
-	    </center>
-    	</div>
-        
-        <svg id="graphSize" version="1.1" baseProfile="basic" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+    <section id="team-danger" class="danger">
+      <nav class="nav-bar-pos">
+        <ul class="nav-bar">
+          <li><a class="left-tab" href="#team-home">Alcojolla</a></li>
+          <li><a class="right-tab" href="#team-mod">Moderation</a></li>
+          <li><a class="right-tab" href="#team-risk">Your Risk</a></li>
+          <li><a class="right-tab" href="#team-danger">The Danger</a></li>
+          <li><a class="right-tab" href="#team-about">About</a></li>
+        </ul>
+      </nav>
+
+      <!-- STUFF GOES UNDER HERE -->
+      <svg class="dangerGraph" version="1.1" baseProfile="basic" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
 	 	y="0px" viewBox="0 0 1657 1767.667" xml:space="preserve">
 		<g id="x_92037">
 			<path id="laJolla" fill="#E8F0E8" stroke="#000000" stroke-miterlimit="10" d="M175,93v71c0,0,19,42.742,19,58s7-5,11,72s4,77,4,77l8,34l-9,37
@@ -294,9 +300,36 @@
 				1121,1053.667 1115,1055.333 1117,1068.667 1128.667,1071.333 1129,1085.333 1137.333,1086 1142.333,1070 1177.667,1071 
 				1178.333,1085.333 1198.333,1085 1198,1070 1189.667,1059.667 1190,1047.333 1193,1030.333 1137.333,1028.667 	"/>
 		</g>
-		</svg>
-      </div>
+      </svg>
     </section>
+
+    <section id="team-risk" class="risk">
+      <nav class="nav-bar-pos">
+        <ul class="nav-bar">
+          <li><a class="left-tab" href="#team-home">Alcojolla</a></li>
+          <li><a class="right-tab" href="#team-mod">Moderation</a></li>
+          <li><a class="right-tab" href="#team-risk">Your Risk</a></li>
+          <li><a class="right-tab" href="#team-danger">The Danger</a></li>
+          <li><a class="right-tab" href="#team-about">About</a></li>
+        </ul>
+      </nav>
+      <!-- STUFF GOES UNDER HERE -->
+    </section>
+    
+    <section id="team-mod" class="mod">
+      <nav class="nav-bar-pos">
+        <ul class="nav-bar">
+          <li><a class="left-tab" href="#team-home">Alcojolla</a></li>
+          <li><a class="right-tab" href="#team-mod">Moderation</a></li>
+          <li><a class="right-tab" href="#team-risk">Your Risk</a></li>
+          <li><a class="right-tab" href="#team-danger">The Danger</a></li>
+          <li><a class="right-tab" href="#team-about">About</a></li>
+        </ul>
+      </nav>
+      <!-- STUFF GOES UNDER HERE -->
+    </section>
+
+
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
