@@ -22,7 +22,7 @@ function drugChart(data){
 
   var colour = d3.scale.linear()
                 .domain([1, 50])
-                .range(["#E8F0E8", "green"]);
+                .range(["#fcd1b8", "red"]);
 
   var i = 0;
   data.forEach(function(d){ //d is of form [id,value]
