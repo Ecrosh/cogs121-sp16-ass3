@@ -36,7 +36,7 @@ function drugChart(data){
   });
   
 
-  var infoBox = d3.select("div#info");
+  var infoBox = d3.select("div#dangerInfo");
   d3.selectAll("g.region")
   .on("mouseover", function(d,i) {
 		var location = "temp";
@@ -71,9 +71,9 @@ function drugChart(data){
 		else{
 			location = "Not Available";
 			}
-         infoBox.html("Location <br> <span style=\"font-size: 50px\">"+ location+
+         infoBox.html("<center>Location <br> <span style=\"font-size: 50px\">"+ location+
 		 "</span> <br><br>Number of Marijuana Arrests<br><span style=\"font-size: 50px\">" + count[i] +
-		 "</span><br><br>Zip Code<br><span style=\"font-size: 50px\">" +zipCode[i] + "</span>"); //print the associated data
+		 "</span><br><br>Zip Code<br><span style=\"font-size: 50px\">" +zipCode[i] + "</span></center>"); //print the associated data
   });
 
  

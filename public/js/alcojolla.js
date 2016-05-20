@@ -42,19 +42,19 @@
 
 	 
 (function($) {
-  var navOffset = $("#navBar").offset().top;
+  var navOffset = $("#nav-bar-pos").offset().top;
 
   $(window).scroll(function(){
     var scrollPos =  $(window).scrollTop();
     if((navOffset<=scrollPos)) {
-      $("#navBar").css("position" ,"fixed");
-      $("#navBar").css("top" ,"0");
-      $("#navBar").css("bottom", "auto");
+      $("#nav-bar-pos").css("position" ,"fixed");
+      $("#nav-bar-pos").css("top" ,"0");
+      $("#nav-bar-pos").css("bottom", "auto");
     }
     else{
-      $("#navBar").css("position" ,"absolute");
-      $("#navBar").css("top" ,"auto");
-      $("#navBar").css("bottom", "0");
+      $("#nav-bar-pos").css("position" ,"absolute");
+      $("#nav-bar-pos").css("top" ,"auto");
+      $("#nav-bar-pos ").css("bottom", "0");
     }
   });
 }($));
