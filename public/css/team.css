@@ -76,9 +76,9 @@ i {
 .miniGauge span {
     font-size: 5vw;
     color: #413639;
-    line-height: 0;
+    line-height: 200px;
+    height: 200px;
     position: absolute;
-    top: 55%;
 }
 
 
@@ -105,7 +105,7 @@ i {
 .leftmod{
     height: 100%;
     width: 25%;
-    min-width: 400px;
+    min-width: 300px;
     background-color: #534947;
     color: white;
     overflow: auto;
