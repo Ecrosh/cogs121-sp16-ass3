@@ -31,6 +31,57 @@ i {
     width: 100vw;
 }
 
+
+/*------------------------------*/
+
+/* GAUGE SECTION */
+#fillgauge1{
+    position: absolute;
+    right: 38.5%;
+}
+
+#fillgauge2{
+//    position: absolute;
+}
+
+#fillgauge3{
+//    position: absolute;
+}
+
+#fillgauge4{
+//    position: absolute;
+}
+
+#fillgauge5{
+//    position: absolute;
+}
+
+/* Container for mainGauge */
+.mainGauge {
+    position: relative;
+    height: 250px;
+}
+
+/* Container for miniGauge */
+.miniGauge {
+    position: relative;
+    padding: 5% 0 0 0;
+}
+
+.miniGauge svg {
+    padding: 0 0.5% 0 4.3%;
+}
+
+/* equal signs */
+.miniGauge span {
+    font-size: 5vw;
+    color: #413639;
+    line-height: 0;
+    position: absolute;
+    top: 55%;
+}
+
+
 /*------------------------------*/
 
 /* MODERATION PAGE */
@@ -52,26 +103,50 @@ i {
 }*/
 
 .leftmod{
-	height: 100%;
-	width: 25%;
-	min-width: 400px;
-	background-color: #534947;
-	color: white;
-	overflow: auto;
-	position: absolute;
-	top: 0px;
-	left: 0px;
+    height: 100%;
+    width: 25%;
+    min-width: 400px;
+    background-color: #534947;
+    color: white;
+    overflow: auto;
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
 .rightmod{
-	height: 100%;
-	width: calc(75% + 40px);
-	background-color: #daceb8;
-	overflow: auto;
-	position: absolute;
-	top: 0px;
-	right: -20px;
+    height: 100%;
+    width: calc(75% + 40px);
+    background-color: #daceb8;
+    overflow: auto;
+    position: absolute;
+    top: 0px;
+    right: -20px;
 }
 
+.modTitle1 {
+    padding-top: 3%;
+    font-size: 25px;
+    color: #413639;
+}
+
+.modTitle2 {
+    padding-bottom: 3%;
+    font-size: 50px;
+    color: #413639;
+}
+
+.modContainer {
+    position: relative;
+}
+
+/* Position and center align gauge descriptions */
+.modContainer div {
+    width: 19%;
+    float: left;
+    text-align: center;
+    padding: 0 0.5% 0 4.3%;
+    font-size: 1.5em;
+}
 
 /*------------------------------*/
 
@@ -202,10 +277,7 @@ i {
 
 /* remove default style within nav bar*/
 .nav-bar li{
-    display:inline;
     list-style-type: none;
-    margin:0;
-    padding:0;
 }
 
 /* Contents within nav Bar */
@@ -213,6 +285,7 @@ i {
     height: 56px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 /* Nav padding, font style */
@@ -234,6 +307,8 @@ i {
     float: left;
     font-family: 'Cherry Swash', cursive;
     font-size: 30px;
+    width: calc(21% - 20px);
+    text-align: center;
 }
 
 /* Position right tabs */

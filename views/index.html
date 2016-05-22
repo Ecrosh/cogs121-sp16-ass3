@@ -301,50 +301,59 @@
     
     <section id="team-mod" class="mod">
     <div class="wrapper">
-		<div class="leftmod">
-			<center> 
-			Find out your alcohol<br>
-			consumption limit!
-			<br>
-			<br>
-			<form action="demo_form.asp">
-				First name: <input type="text" name="fname"><br><br>
-				Last name: <input type="text" name="lname"><br><br>
-				Age: <input type="text" name="fname"><br><br>
-				Gender:<input type="text" name="fname"><br><br>
-				Height: <input type="text" name="fname"><br><br>
-				Weight: <input type="text" name="fname"><br><br>
-				<input type="submit" value="Submit">
-			</form>
-			</center>
-			<br>
-		</div>
-		<div class="rightmod">
-			<center>
-			If you really plan on drinking... <br>
-			HERE'S HOW TO DRINK RESPONSIBLY 
-			</center>
+      <div class="leftmod">
+        <center> 
+	  Find out your alcohol
+	  <br>
+	  consumption limit!
+   	  <br>
+	  <br>
+	  <form action="demo_form.asp">
+	    First name: <input type="text" name="fname"><br><br>
+	    Last name: <input type="text" name="lname"><br><br>
+	    Age: <input type="text" name="fname"><br><br>
+	    Gender:<input type="text" name="fname"><br><br>
+	    Height: <input type="text" name="fname"><br><br>
+	    Weight: <input type="text" name="fname"><br><br>
+	    <input type="submit" value="Submit">
+	  </form>
+	</center>
+	<br>
+      </div>
 		
-			<svg id="fillgauge1" width="97%" height="250" onclick="gauge1.update(NewValue());"></svg>
-			
-			<svg id="fillgauge2" width="19%" height="200" onclick="gauge2.update(NewValue());"></svg>
-			=
-			<svg id="fillgauge3" width="19%" height="200" onclick="gauge3.update(NewValue());"></svg>
-			=
-			<svg id="fillgauge4" width="19%" height="200" onclick="gauge4.update(NewValue());"></svg>
-			=
-			<svg id="fillgauge5" width="19%" height="200" onclick="gauge5.update(NewValue());"></svg>
-			<br>
-			12 fl oz of regular beer (standard can or bottle)
-			<br>
-			8-9 fl oz of malt liquor
-			<br>
-			5 fl oz of table wine
-			<br>
-			1.5 fl oz shot of 80-proof distilled spirits
-		</div>
-		</div>
+      <div class="rightmod">
+ 	<center class="modTitle1">If you really plan on drinking...</center>
+	<center class="modTitle2">HERE'S HOW TO DRINK RESPONSIBLY</center>
+	
+        <div class="mainGauge">
+	  <svg id="fillgauge1" width="23%" height="250" onclick="gauge1.update(NewValue());"></svg>
+	</div>
+
+        <div class="miniGauge">
+	  <svg id="fillgauge2" width="19%" height="200" onclick="gauge2.update(NewValue());"></svg>
+	  <span>=</span>
+	  <svg id="fillgauge3" width="19%" height="200" onclick="gauge3.update(NewValue());"></svg>
+	  <span>=</span>
+	  <svg id="fillgauge4" width="19%" height="200" onclick="gauge4.update(NewValue());"></svg>
+	  <span>=</span>
+	  <svg id="fillgauge5" width="19%" height="200" onclick="gauge5.update(NewValue());"></svg>
+	</div>
+	
+	<br>
+	<div class="modContainer">
+	  <div>12 fl oz of regular beer (standard can or bottle)</div>
+	  <div>8-9 fl oz of malt liquor</div>
+	  <div>5 fl oz of table wine</div>
+	  <div>1.5 fl oz shot of 80-proof distilled spirits</div>
+	</div>
+	<br>
+	<br>
+	<br>
+      </div>
+    </div>
+    
     </section>
+</body>
 
 <script type="text/javascript">
     var config1 = liquidFillGaugeDefaultSettings();
@@ -413,13 +422,7 @@
     config5.displayPercent = false;
 	config5.waveCount = 3;
 	var gauge5 = loadLiquidFillGauge("fillgauge5", 30, config5);
-
-    
-
-
 </script>
-
-</body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
 
