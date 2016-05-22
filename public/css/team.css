@@ -30,11 +30,32 @@ i {
     height: calc(100vh - 56px);
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("/img/mod.png");
+    /*background-image: url("/img/mod.png");*/
     /* temporary border */
     border-top: solid;
     border-color: #413639;
+
 }
+/*
+.liquidFillGaugeText { 
+	font-family: Helvetica; 
+	font-weight: bold; 
+}*/
+
+.leftmod{
+	height: calc(100vh - 56px);
+	float: left;
+	width: 25%;
+	background-color: #534947;
+	color: white;
+}
+.rightmod{
+	height: calc(100vh - 56px);
+	float: right;
+	width: 75%;
+	background-color: #daceb8;
+}
+
 
 /*------------------------------*/
 
