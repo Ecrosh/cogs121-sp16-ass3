@@ -40,7 +40,7 @@
 }($));
 
 
-	 
+/*	 
 (function($) {
   var navOffset = $("#nav-bar-pos").offset().top;
 
@@ -57,4 +57,4 @@
       $("#nav-bar-pos ").css("bottom", "0");
     }
   });
-}($));
+}($));*/
