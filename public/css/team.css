@@ -81,26 +81,28 @@ i {
     position: absolute;
 }
 
+#calc{ 
+	width = 20%;
+}
 
 /*------------------------------*/
 
 /* MODERATION PAGE */
+.calcForm{
+   padding-bottom: 3%;
+}
+
 .mod {
     height: calc(100vh - 56px);
     background-size: cover;
     background-repeat: no-repeat;
-    /*background-image: url("/img/mod.png");*/
     /* temporary border */
     border-top: solid;
     border-color: #413639;
     overflow: hidden;
     position: relative;
 }
-/*
-.liquidFillGaugeText { 
-	font-family: Helvetica; 
-	font-weight: bold; 
-}*/
+
 
 .leftmod{
     height: 100%;
