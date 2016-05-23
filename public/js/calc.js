@@ -127,4 +127,5 @@ function calc(e){
 	if (hour > 1) text = text + "s";
 	document.getElementById("calc").innerHTML = text;
 	//document.getElementById("test").innerHTML = "You weight " + weight + "<br> Your gender is " + gender;
+
 }

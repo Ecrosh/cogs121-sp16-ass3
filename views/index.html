@@ -307,12 +307,12 @@
 	  <br><br>
 	  <form id="alcCalc">
 	    <p> Name: <input id = "calcForm" type="text" name="name" required > </p>
-	    <p> Gender: <select name ="gender"required></p>
+	    <p> Gender: <select name ="gender"required> 
 			<option value=""></option>
 			<option value="male">Male</option>
 			<option value="female">Female</option>
-		</select> 
-	    <p> Weight: <select name="weight" required></p>
+		</select>  </p>
+	    <p> Weight: <select name="weight" required>
 			<option value=""></option>
 			<option value=100>100 lbs / 45 kg </option>
 			<option value=120>120 lbs / 54 kg </option>
@@ -322,8 +322,9 @@
 			<option value=200>200 lbs / 91 kg </option>
 			<option value=220>220 lbs / 100 kg </option>
 			<option value=240>240 lbs / 109 kg </option>
-		</select>
-		<p> How many hours do you plan to drink? <select name="hours" required></p>
+		</select></p>
+		<p> How many hours do you plan to drink? 
+		<select name="hours" required>
 			<option value=""> </option>
 			<option value=1>1 hour or less</option>
 			<option value=2>2 hours </option>
@@ -333,14 +334,24 @@
 			<option value=6>6 hours </option>
 			<option value=7>7 hours </option>
 			<option value=8>8 hours </option>
-		</select> <br> <br>
+		</select> </p>
 		<input id="submitBtn" type="submit" value="Submit"/> 
+		<!-- <input type="submit" value="Submit"onclick="return foo();" />  -->
+
 	  </form>
     <p id="test"></p>
 	
 	</center>
       </div>
-		
+<!--
+<script>	  
+	  function foo()
+{
+   alert("Submit button clicked!");
+   return false;
+}
+</script>  
+-->
       <div class="rightmod">
  	<center class="modTitle1">If you really plan on drinking...</center>
 	<center class="modTitle2">HERE'S HOW TO DRINK RESPONSIBLY</center>
