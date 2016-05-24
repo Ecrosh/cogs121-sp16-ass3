@@ -64,3 +64,11 @@
     config5.displayPercent = false;
 	config5.waveCount = 3;
 	var gauge5 = loadLiquidFillGauge("fillgauge5", 30, config5);
+	
+	function NewValue(){
+        if(Math.random() > .5){
+            return Math.round(Math.random()*100);
+        } else {
+            return (Math.random()*100).toFixed(1);
+        }
+    }
