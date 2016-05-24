@@ -119,14 +119,14 @@ function loadLiquidFillGauge(elementId, value, config) {
         .attr('transform','translate('+radius+','+radius+')');
 
     // Text where the wave does not overlap.
-   /* var text1 = gaugeGroup.append("text")
-        .text(textRounder(textStartValue) + percentText)
-        .attr("class", "liquidFillGaugeText")
-        .attr("text-anchor", "middle")
-        .attr("font-size", textPixels + "px")
-        .style("fill", config.textColor)
-        .attr('transform','translate('+radius+','+textRiseScaleY(config.textVertPosition)+')');
-*/
+   var text1 = gaugeGroup.append("text")
+        //.text(textRounder(textStartValue) + percentText)
+        //.attr("class", "liquidFillGaugeText")
+        //.attr("text-anchor", "middle")
+       // .attr("font-size", textPixels + "px")
+       // .style("fill", config.textColor)
+      //  .attr('transform','translate('+radius+','+textRiseScaleY(config.textVertPosition)+')');
+
     // The clipping wave area.
     var clipArea = d3.svg.area()
         .x(function(d) { return waveScaleX(d.x); } )
@@ -151,12 +151,12 @@ function loadLiquidFillGauge(elementId, value, config) {
 
     // Text where the wave does overlap.
     var text2 = fillCircleGroup.append("text")
-        .text(textRounder(textStartValue) + percentText)
-        .attr("class", "liquidFillGaugeText")
-        .attr("text-anchor", "middle")
-        .attr("font-size", textPixels + "px")
-        .style("fill", config.waveTextColor)
-        .attr('transform','translate('+radius+','+textRiseScaleY(config.textVertPosition)+')');
+        //.text(textRounder(textStartValue) + percentText)
+       // .attr("class", "liquidFillGaugeText")
+       // .attr("text-anchor", "middle")
+      //  .attr("font-size", textPixels + "px")
+       // .style("fill", config.waveTextColor)
+        //.attr('transform','translate('+radius+','+textRiseScaleY(config.textVertPosition)+')');
 
     // Make the value count up.
     if(config.valueCountUp){
@@ -217,10 +217,10 @@ function loadLiquidFillGauge(elementId, value, config) {
 
             text1.transition()
                 .duration(config.waveRiseTime)
-                .tween("text", textTween);
+                //.tween("text", textTween);
             text2.transition()
                 .duration(config.waveRiseTime)
-                .tween("text", textTween);
+              //  .tween("text", textTween);
 
             var fillPercent = Math.max(config.minValue, Math.min(config.maxValue, value))/config.maxValue;
             var waveHeight = fillCircleRadius*waveHeightScale(fillPercent*100);

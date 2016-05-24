@@ -3,8 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
-    <script src="http://d3js.org/d3.v3.min.js" language="JavaScript"></script>
-    <script src="/js/liquidFillGauge.js" language="JavaScript"></script>
+    
 </head>
 
 <body>
@@ -306,48 +305,60 @@
 
 	  <br><br>
 	  <form id="alcCalc">
-	    <p> Name: <input id = "calcForm" type="text" name="name" required > </p>
-	    <p> Gender: <select name ="gender"required></p>
-			<option value=""></option>
-			<option value="male">Male</option>
-			<option value="female">Female</option>
-		</select> 
-	    <p> Weight: <select name="weight" required></p>
-			<option value=""></option>
-			<option value=100>100 lbs / 45 kg </option>
-			<option value=120>120 lbs / 54 kg </option>
-			<option value=140>140 lbs / 64 kg </option>
-			<option value=160>160 lbs / 73 kg </option>
-			<option value=180>180 lbs / 82 kg </option>
-			<option value=200>200 lbs / 91 kg </option>
-			<option value=220>220 lbs / 100 kg </option>
-			<option value=240>240 lbs / 109 kg </option>
-		</select>
-		<p> How many hours do you plan to drink? <select name="hours" required></p>
-			<option value=""> </option>
-			<option value=1>1 hour or less</option>
-			<option value=2>2 hours </option>
-			<option value=3>3 hours </option>
-			<option value=4>4 hours </option>
-			<option value=5>5 hours </option>
-			<option value=6>6 hours </option>
-			<option value=7>7 hours </option>
-			<option value=8>8 hours </option>
-		</select> <br> <br>
-		<input id="submitBtn" type="submit" value="Submit"/> 
+	    <p> <label for="name">Name:</label>
+			<input id = "name" type="text" name="name" required > </p>
+	    
+		<p><label for="gender">Gender:</label>
+			<select id ="gender"  name ="gender" required> 
+				<option value=""></option>
+				<option value="male">Male</option>
+				<option value="female">Female</option>
+			</select>  
+		</p>
+	    
+		<p> <label for="weight">Weight:</label>
+			<select id="weight"  name="weight" required>
+				<option value=""></option>
+				<option value=100>100 lbs / 45 kg </option>
+				<option value=120>120 lbs / 54 kg </option>
+				<option value=140>140 lbs / 64 kg </option>
+				<option value=160>160 lbs / 73 kg </option>
+				<option value=180>180 lbs / 82 kg </option>
+				<option value=200>200 lbs / 91 kg </option>
+				<option value=220>220 lbs / 100 kg </option>
+				<option value=240>240 lbs / 109 kg </option>
+			</select>
+		</p>
+		
+		<p> <label for="hour"> How many hours do you plan to drink?  </label> 
+			<select id="hour"  name="hour" required>
+				<option value=""> </option>
+				<option value=1>1 hour or less</option>
+				<option value=2>2 hours </option>
+				<option value=3>3 hours </option>
+				<option value=4>4 hours </option>
+				<option value=5>5 hours </option>
+				<option value=6>6 hours </option>
+				<option value=7>7 hours </option>
+				<option value=8>8 hours </option>
+			</select> 
+		</p>
+		
+		<input type="submit" value="Submit" />
+
 	  </form>
-    <p id="test"></p>
+   <!-- <p id="test"></p> -->
 	
 	</center>
       </div>
-		
+
       <div class="rightmod">
  	<center class="modTitle1">If you really plan on drinking...</center>
 	<center class="modTitle2">HERE'S HOW TO DRINK RESPONSIBLY</center>
 	
         <div class="mainGauge">
 	  <svg id="fillgauge1" width="23%" height="250" onclick="gauge1.update(NewValue());"></svg>
-		<p align="left" id="calc"></p>
+		<p align="left" id="result"></p>
 	</div>
 
         <div class="miniGauge">
