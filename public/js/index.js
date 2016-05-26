@@ -17,12 +17,12 @@
 
 function drugChart(data){
 
-  var zipCode = data.map(function (d){ return d.zip; });
+      var zipCode = data.map(function (d){ return d.zip; });
   var count = data.map(function (d){ return d.count; })
 
   var colour = d3.scale.linear()
-                .domain([1, 50])
-                .range(["#fcd1b8", "red"]);
+                .domain([1, 500])
+                    .range(["#FFCDD2", "red"]);
 
   var i = 0;
   data.forEach(function(d){ //d is of form [id,value]
@@ -72,7 +72,7 @@ function drugChart(data){
 			location = "Not Available";
 			}
          infoBox.html("<center>Location <br> <span style=\"font-size: 50px\">"+ location+
-		 "</span> <br><br>Number of Marijuana Arrests<br><span style=\"font-size: 50px\">" + count[i] +
+		 "</span> <br><br>Number of Alcohol Related Crimes<br><span style=\"font-size: 50px\">" + count[i] +
 		 "</span><br><br>Zip Code<br><span style=\"font-size: 50px\">" +zipCode[i] + "</span></center>"); //print the associated data
   });
 

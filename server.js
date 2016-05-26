@@ -50,9 +50,12 @@ app.get('/delphidata', function (req, res) {
       return console.error("could not connect to postgres", err);
     }
 
-    //Counts number of marijuana cases for each zipcode in San Diego
-    var query = 'SELECT zip, COUNT(*) FROM cogs121_16_raw.arjis_crimes WHERE charge_description LIKE \'%MARIJUANA%\' AND community = \'SAN DIEGO\' AND zip != \'\' AND zip != \'92014\' AND zip != \'92046\' AND zip != \'92127\' AND zip != \'92128\' AND zip != \'92129\' AND zip != \'92182\' GROUP BY zip ORDER BY zip;'
-
+    //Counts number of alcohol related crimes for each zipcode in San Diego
+    var query = 'SELECT zip, COUNT(*) FROM cogs121_16_raw.arjis_crimes WHERE charge_description LIKE \'%ALCOHOL%\' AND ' + 
+                'community = \'SAN DIEGO\' AND zip != \'\' AND zip != \'92014\' AND zip != \'92046\' AND zip != \'92127\' AND ' +
+                'zip != \'92128\' AND zip != \'92129\' AND zip != \'92182\' AND zip != \'92027\' AND zip != \'91942\' AND ' + 
+                'zip != \'92071\' AND zip != \'92093\'  AND zip != \'92134\' AND zip != \'92136\' AND zip != \'92154\' AND zip != \'92161\'GROUP BY zip ORDER BY zip;'
+    
     client.query(query, function(err, result){
                     if(err){
                       return console.error('error running query',err);
