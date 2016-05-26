@@ -177,7 +177,8 @@ svg>g:hover{
     height: calc(100vh - 56px);
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("/img/risk.png");
+    overflow: hidden;
+    position: relative;
 }
 
 /*------------------------------*/
@@ -360,3 +361,11 @@ svg>g:hover{
 }
 
 
+
+
+/* TEMPORARY IMAGE */
+#tempImg {
+    width: 100%;  
+    height: 100%;
+    position: absolute;
+}
