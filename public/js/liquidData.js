@@ -55,7 +55,7 @@
 	config5.circleColor = "#848081";
     config5.textColor = "#848081";
     config5.waveTextColor = "#848081";
-    config5.waveColor = "#d8d3d4";
+    config5.waveColor = "F2F2F2";
     config5.textVertPosition = 0.8;
     config5.waveAnimateTime = 5000;
     config5.waveHeight = 0.05;

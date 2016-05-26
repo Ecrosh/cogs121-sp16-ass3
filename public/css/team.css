@@ -82,7 +82,12 @@ i {
 }
 
 #calc{ 
-	width = 20%;
+    width = 20%;
+}
+
+svg>g:hover{
+    background-color:red;
+    
 }
 
 /*------------------------------*/
@@ -103,6 +108,9 @@ i {
     position: relative;
 }
 
+.modContainer div {
+    padding-bottom: 30px;
+}
 
 .leftmod{
     height: 100%;
@@ -146,9 +154,21 @@ i {
     width: 19%;
     float: left;
     text-align: center;
-    padding: 0 0.5% 0 4.3%;
+    padding: 0 0.5% 30px 4.3%;
     font-size: 1.5em;
 }
+
+/* Form result position */
+#result {
+    position: relative;
+    top: 20%;
+    right: 3%;
+    float: right;
+    width: 33%;
+    text-align: center;
+    font-size: 2em;
+}
+
 
 /*------------------------------*/
 
@@ -338,3 +358,5 @@ i {
     position: relative;
     top: 35%;
 }
+
+
