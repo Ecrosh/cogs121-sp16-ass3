@@ -65,7 +65,7 @@ i {
 /* Container for miniGauge */
 .miniGauge {
     position: relative;
-    padding: 5% 0 0 0;
+    padding: 2.5% 0 0 0;
 }
 
 .miniGauge svg {
@@ -83,11 +83,6 @@ i {
 
 #calc{ 
     width = 20%;
-}
-
-svg>g:hover{
-    background-color:red;
-    
 }
 
 /*------------------------------*/
@@ -154,7 +149,7 @@ svg>g:hover{
     width: 19%;
     float: left;
     text-align: center;
-    padding: 0 0.5% 30px 4.3%;
+    padding: 0 0.5% 0 4.3%;
     font-size: 1.5em;
 }
 
@@ -189,31 +184,37 @@ svg>g:hover{
     background-size: cover;
     background-repeat: no-repeat;
     background-color: tan;
+    position: relative;
 }
 
 .dangerGraph {
     height: calc(100vh - 56px);
-    position:relative;
-    float:right;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 #dangerInfo {
     padding-top: 1%;
     width: 50%;
-    left: 50%;
     float: left;
     font-family: 'Amaranth', sans-serif;
     font-style: normal;
     font-weight: 200;
+    position: absolute;
+    top: 15%;
+    left: 3%;
 }
 
 .dangerTitle {
-    position: relative;
     font-size: 2vw;
     font-family: 'Amaranth', sans-serif;
     font-style: normal;
     font-weight: 200;
     width: 50%;
+    position: absolute;
+    top: 5%;
+    left: 2%;
 }
 
 
