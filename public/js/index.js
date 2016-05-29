@@ -3,7 +3,35 @@
 
   // ASSIGNMENT PART 1B
   // Grab the delphi data from the server
+  var rows1, rows2, remaining = 2;
+
   d3.json("/delphidata", function(err, data) {
+    if (err) {
+        console.log("ERROR");
+        console.log(err);
+        return;
+    }
+    rows1 = data;
+    console.log("rows1", rows1);
+    if (!--remaining) visualize();
+  });
+
+  d3.json("/duiData", function(err, data) {
+    if (err) {
+        console.log("ERROR");
+        console.log(err);
+        return;
+    }
+    rows2 = data;
+    console.log("rows2", rows2);
+    if (!--remaining) visualize();
+  });
+
+  function visualize() {
+    drugChart(rows1, rows2);
+  }
+
+  /*d3.json("/delphidata", function(err, data) {
     if (err) {
         console.log("ERROR");
         console.log(err);
@@ -11,14 +39,15 @@
     }
     console.log("Data", data);
     drugChart(data);
-});
+});*/
 
 })(d3);
 
-function drugChart(data){
+function drugChart(data, data1){
 
-      var zipCode = data.map(function (d){ return d.zip; });
-  var count = data.map(function (d){ return d.count; })
+  var zipCode = data.map(function (d){ return d.zip; });
+  var count = data.map(function (d){ return d.count; });
+  var duiCnt = data1.map(function (d){ return d.dui;});
 
   var colour = d3.scale.linear()
                 .domain([1, 500])
@@ -72,7 +101,8 @@ function drugChart(data){
 			location = "Not Available";
 			}
          infoBox.html("<center>Location <br> <span style=\"font-size: 50px\">"+ location+
-		 "</span> <br><br>Number of Alcohol Related Crimes<br><span style=\"font-size: 50px\">" + count[i] +
+		 "</span> <br><br>Total Alcohol Related Crimes in " + location + "<br><span style=\"font-size: 50px\">" + count[i] +
+         "</span><br><br>Number of DUI Arrests<br><span style=\"font-size: 50px\">" + duiCnt[i] + 
 		 "</span><br><br>Zip Code<br><span style=\"font-size: 50px\">" +zipCode[i] + "</span></center>"); //print the associated data
   });
 

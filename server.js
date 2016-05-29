@@ -51,12 +51,48 @@ app.get('/delphidata', function (req, res) {
     }
 
     //Counts number of alcohol related crimes for each zipcode in San Diego
-    var query = 'SELECT zip, COUNT(*) FROM cogs121_16_raw.arjis_crimes WHERE charge_description LIKE \'%ALCOHOL%\' AND ' + 
+    var query = 'SELECT zip, COUNT(*) FROM cogs121_16_raw.arjis_crimes WHERE charge_description LIKE \'%ALC%\' AND ' + 
+                'community = \'SAN DIEGO\' AND zip != \'\' AND zip != \'92014\' AND zip != \'92046\' AND zip != \'92127\' AND ' +
+                'zip != \'92128\' AND zip != \'92129\' AND zip != \'92182\' AND zip != \'92027\' AND zip != \'91942\' AND ' + 
+                'zip != \'92071\' AND zip != \'92093\'  AND zip != \'92134\' AND zip != \'92136\' AND zip != \'92154\' AND zip != \'92161\'GROUP BY zip ORDER BY zip;'
+    var query1 ='SELECT zip, COUNT(*) as DUI FROM cogs121_16_raw.arjis_crimes WHERE charge_description LIKE \'%DUI%\' AND ' + 
                 'community = \'SAN DIEGO\' AND zip != \'\' AND zip != \'92014\' AND zip != \'92046\' AND zip != \'92127\' AND ' +
                 'zip != \'92128\' AND zip != \'92129\' AND zip != \'92182\' AND zip != \'92027\' AND zip != \'91942\' AND ' + 
                 'zip != \'92071\' AND zip != \'92093\'  AND zip != \'92134\' AND zip != \'92136\' AND zip != \'92154\' AND zip != \'92161\'GROUP BY zip ORDER BY zip;'
     
     client.query(query, function(err, result){
+                    if(err){
+                      return console.error('error running query',err);
+                    }
+                    res.json(result.rows);
+                    client.end();
+                  });
+  });
+});
+
+app.get('/duiData', function (req, res) {
+  // TODO
+  // Connect to the DELPHI Database and return the proper information
+  // that will be displayed on the D3 visualization
+  // Table: Smoking Prevalance in Adults
+  // Task: In the year 2003, retrieve the total number of respondents
+  // for each gender. 
+  // Display that data using D3 with gender on the x-axis and 
+  // total respondents on the y-axis.
+  var conString= process.env.DATABASE_CONNECTION_URL;
+  var client = new pg.Client(conString);
+  client.connect(function(err) {
+    if(err){
+      return console.error("could not connect to postgres", err);
+    }
+
+    //Counts number of DUI for each zipcode in San Diego
+    var query1 ='SELECT zip, COUNT(*) as DUI FROM cogs121_16_raw.arjis_crimes WHERE charge_description LIKE \'%DUI%\' AND ' + 
+                'community = \'SAN DIEGO\' AND zip != \'\' AND zip != \'92014\' AND zip != \'92046\' AND zip != \'92127\' AND ' +
+                'zip != \'92128\' AND zip != \'92129\' AND zip != \'92182\' AND zip != \'92027\' AND zip != \'91942\' AND ' + 
+                'zip != \'92071\' AND zip != \'92093\'  AND zip != \'92134\' AND zip != \'92136\' AND zip != \'92154\' AND zip != \'92161\'GROUP BY zip ORDER BY zip;'
+    
+    client.query(query1, function(err, result){
                     if(err){
                       return console.error('error running query',err);
                     }
