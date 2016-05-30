@@ -51,7 +51,7 @@ function drugChart(data, data1){
 
   var colour = d3.scale.linear()
                 .domain([1, 500])
-                    .range(["#FFCDD2", "red"]);
+                    .range(["#fff7bc", "#662506"]);
 
   var i = 0;
   data.forEach(function(d){ //d is of form [id,value]
