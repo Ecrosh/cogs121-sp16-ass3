@@ -155,11 +155,16 @@ i {
 
 /* Form result position */
 #result {
-    position: relative;
+ /*   position: relative;
     top: 20%;
     right: 3%;
     float: right;
     width: 33%;
+    text-align: center;
+    font-size: 2em;*/
+	
+	position: relative;
+    top: 20%;
     text-align: center;
     font-size: 2em;
 }

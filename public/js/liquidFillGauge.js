@@ -37,7 +37,7 @@ function loadLiquidFillGauge(elementId, value, config) {
     var radius = Math.min(parseInt(gauge.style("width")), parseInt(gauge.style("height")))/2;
     var locationX = parseInt(gauge.style("width"))/2 - radius;
     var locationY = parseInt(gauge.style("height"))/2 - radius;
-    var fillPercent = Math.max(config.minValue, Math.min(config.maxValue, value))/config.maxValue;
+    var fillPercent = Math.max(config.minValue, Math.min(config.maxValue, value*4.5))/config.maxValue;
 
     var waveHeightScale;
     if(config.waveHeightScaling){
@@ -120,12 +120,12 @@ function loadLiquidFillGauge(elementId, value, config) {
 
     // Text where the wave does not overlap.
    var text1 = gaugeGroup.append("text")
-        //.text(textRounder(textStartValue) + percentText)
-        //.attr("class", "liquidFillGaugeText")
-        //.attr("text-anchor", "middle")
-       // .attr("font-size", textPixels + "px")
-       // .style("fill", config.textColor)
-      //  .attr('transform','translate('+radius+','+textRiseScaleY(config.textVertPosition)+')');
+        .text(textRounder(textStartValue) + percentText + " fl oz")
+        .attr("class", "liquidFillGaugeText")
+        .attr("text-anchor", "middle")
+        .attr("font-size", textPixels*.8 + "px")
+        .style("fill", config.textColor)
+        .attr('transform','translate('+radius+','+textRiseScaleY(config.textVertPosition)+')');
 
     // The clipping wave area.
     var clipArea = d3.svg.area()
