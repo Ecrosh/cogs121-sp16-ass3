@@ -65,7 +65,7 @@ app.get('/duiData', function (req, res) {
     if(err){
       return console.error("could not connect to postgres", err);
     }
-
+    //console.log("DUI query executing");
     //Counts number of DUI for each zipcode in San Diego
     var query1 ='SELECT zip, COUNT(*) as DUI FROM cogs121_16_raw.arjis_crimes WHERE charge_description LIKE \'%DUI%\' AND ' + 
                 'community = \'SAN DIEGO\' AND zip != \'\' AND zip != \'92014\' AND zip != \'92046\' AND zip != \'92127\' AND ' +
@@ -78,6 +78,7 @@ app.get('/duiData', function (req, res) {
                     }
                     res.json(result.rows);
                     client.end();
+                    //console.log("DUI query closing");
                   });
   });
 });
@@ -89,11 +90,11 @@ app.get('/genderData', function (req, res) {
     if(err){
       return console.error("could not connect to postgres", err);
     }
-
+    console.log("Gender query executing");
     //Total chronic alcohol disorder cases for each gender
     var query1 ='with y as( with x as (select g."Gender", replace(g."Hospitalization No.", \'<5\', \'4\') as "Hospitalization No." ' +
                 'from cogs121_16_raw.hhsa_chronic_alcohol_related_disorder_by_gender_2010_2012 g ' +
-                'where g."Year" = 2012 and g."Hospitalization No." != '') ' +
+                'where g."Year" = 2012 and g."Hospitalization No." != \'\') ' +
                 'select x."Gender", cast(x."Hospitalization No." as Integer) as gSum from x) ' +
                 'select y."Gender", sum(y.gSum) as genderSum from y group by y."Gender" order by y."Gender"';
     
@@ -103,6 +104,7 @@ app.get('/genderData', function (req, res) {
                     }
                     res.json(result.rows);
                     client.end();
+                    console.log("Gender query closing");
                   });
   });
 });
@@ -114,11 +116,11 @@ app.get('/raceData', function (req, res) {
     if(err){
       return console.error("could not connect to postgres", err);
     }
-
+    console.log("Race query executing");
     //Total chronic alcohol disorder cases for each race
     var query1 ='with y as( with x as (select r."Race", replace(r."Hospitalization No.", \'<5\', \'4\') as "Hospitalization No." ' +
                 'from cogs121_16_raw.hhsa_chronic_alcohol_related_disorder_by_race_2010_2012 r ' +
-                'where r."Year" = 2012 and r."Hospitalization No." != '') ' +
+                'where r."Year" = 2012 and r."Hospitalization No." != \'\') ' +
                 'select x."Race", cast(x."Hospitalization No." as Integer) as rSum from x) ' +
                 'select y."Race", sum(y.rSum) as raceSum from y group by y."Race" order by y."Race"';
     
@@ -128,6 +130,7 @@ app.get('/raceData', function (req, res) {
                     }
                     res.json(result.rows);
                     client.end();
+                    console.log("Race query closing");
                   });
   });
 });
@@ -139,11 +142,11 @@ app.get('/ageData', function (req, res) {
     if(err){
       return console.error("could not connect to postgres", err);
     }
-
+    console.log("Age query executing");
     //Total chronic alcohol disorder cases for each age range
     var query1 ='with y as( with x as (select a."Age", replace(a."Hospitalization No.", \'<5\', \'4\') as "Hospitalization No." ' +
                 'from cogs121_16_raw.hhsa_chronic_alcohol_related_disorder_by_age_2010_2012 a ' +
-                'where a."Year" = 2012 and a."Hospitalization No." != '') ' +
+                'where a."Year" = 2012 and a."Hospitalization No." != \'\') ' +
                 'select x."Age", cast(x."Hospitalization No." as Integer) as aSum from x) ' +
                 'select y."Age", sum(y.aSum) as ageSum from y group by y."Age" order by y."Age"';
     
@@ -153,6 +156,7 @@ app.get('/ageData', function (req, res) {
                     }
                     res.json(result.rows);
                     client.end();
+                    console.log("Age query closing");
                   });
   });
 });

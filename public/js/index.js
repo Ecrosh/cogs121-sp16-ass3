@@ -4,6 +4,8 @@
   // ASSIGNMENT PART 1B
   // Grab the delphi data from the server
   var rows1, rows2, remaining = 2;
+  //var rows1, rows2, rows3, rows4, rows5, remaining = 5;
+
 
   d3.json("/delphidata", function(err, data) {
     if (err) {
@@ -30,6 +32,43 @@
   function visualize() {
     drugChart(rows1, rows2);
   }
+
+/*  d3.json("/genderData", function(err, data) {
+    if (err) {
+        console.log("ERROR");
+        console.log(err);
+        return;
+    }
+    rows3 = data;
+    console.log("genderData", rows3);
+    if (!--remaining) visualizeRisk();
+  });
+
+  d3.json("/raceData", function(err, data) {
+    if (err) {
+        console.log("ERROR");
+        console.log(err);
+        return;
+    }
+    rows4 = data;
+    console.log("raceData", rows4);
+    if (!--remaining) visualizeRisk();
+  });
+
+  d3.json("/ageData", function(err, data) {
+    if (err) {
+        console.log("ERROR");
+        console.log(err);
+        return;
+    }
+    rows5 = data;
+    console.log("ageData", rows5);
+    if (!--remaining) visualizeRisk();
+  });  
+
+  function visualizeRisk() {
+    riskChart(rows3, rows4, row5);
+  }*/
 
   /*d3.json("/delphidata", function(err, data) {
     if (err) {
