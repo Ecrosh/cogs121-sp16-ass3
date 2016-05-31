@@ -180,7 +180,16 @@ i {
     overflow: hidden;
     position: relative;
 }
-
+.bubbleChart {
+      min-width: 50px;
+      max-width: 350px;
+      height: 350px;
+      margin: 0 auto;
+}
+.bubbleChart svg{
+      background: #000000;
+}
+	
 /*------------------------------*/
 
 /* DANGER PAGE */
