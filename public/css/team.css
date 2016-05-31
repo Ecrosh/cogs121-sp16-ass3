@@ -59,7 +59,7 @@ i {
 /* Container for mainGauge */
 .mainGauge {
     position: relative;
-    height: 250px;
+    height: 100px;
 }
 
 /* Container for miniGauge */
@@ -129,19 +129,27 @@ i {
 }
 
 .modTitle1 {
-    padding-top: 3%;
+    padding: 3% 0 2% 0;
     font-size: 25px;
     color: #413639;
 }
 
 .modTitle2 {
-    padding-bottom: 3%;
+    padding-bottom: 2%;
     font-size: 50px;
     color: #413639;
 }
 
+.modTitle3 {
+    padding: 5% 0 3% 0;
+    font-size: 25px;
+    color: #413639;
+}
+
+
 .modContainer {
     position: relative;
+    padding: 30px 0 30px 0;
 }
 
 /* Position and center align gauge descriptions */
@@ -162,9 +170,6 @@ i {
     width: 33%;
     text-align: center;
     font-size: 2em;*/
-	
-	position: relative;
-    top: 20%;
     text-align: center;
     font-size: 2em;
 }
@@ -216,8 +221,8 @@ i {
     font-style: normal;
     font-weight: 200;
     position: absolute;
-    top: 15%;
-    left: 3%;
+    top: 30%;
+    left: 1%;
 }
 
 .dangerTitle {
@@ -228,9 +233,15 @@ i {
     width: 50%;
     position: absolute;
     top: 5%;
-    left: 2%;
+    left: 1%;
 }
 
+#imgPos {
+    position: absolute;
+    top: 15%;
+    width: 50%;
+    left: 1%;
+}
 
 /*------------------------------*/
 
