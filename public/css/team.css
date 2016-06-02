@@ -102,6 +102,9 @@ i {
     overflow: hidden;
     position: relative;
 }
+select {
+    color: black;
+	}
 
 .modContainer div {
     padding-bottom: 30px;
