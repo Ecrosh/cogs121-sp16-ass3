@@ -296,7 +296,6 @@
       <!-- STUFF GOES UNDER HERE -->
     <div class="wrapper">
       <div class="leftmod">
-        <center> 
 	  <p>You may be at risk!</p>
 	  <p>Fill out the form below to check your risk.</p>
 	  <form>
@@ -324,8 +323,6 @@
 		<input type="submit" value="Submit" />
 
 	  </form>
-	
-	</center>
       </div>
 
       <div class="rightmod">
@@ -340,56 +337,57 @@
     
     <section id="team-mod" class="mod">
     <div class="wrapper">
+      
       <div class="leftmod">
-        <center> 
-	  <p>Find out your alcohol
-	  consumption limit!
-	  </p>
+       <div class="leftContainer">
+        <center>Find out your alcohol consumption limit!</center>
 	  <form id="alcCalc">
-	    <p> <label for="name">Name:</label>
-			<input id = "name" type="text" name="name" required > </p>
+	    <div class="innerFormLeft">
+	      <label id="nameTag" for="name">Name:</label>
+	      <br>
+      	      <label id="genderTag" for="gender">Gender:</label>
+	      <br>
+	      <label id="weightTag" for="weight">Weight:</label>	
+	      <br>
+	      <label id="hourTag" for="hour"> Number of hours you plan to drink: </label>
+	    </div>
 	    
-		<p><label for="gender">Gender:</label>
-			<select id ="gender"  name ="gender" required> 
-				<option value="" selected disabled hidden> </option>
-				<option value="male">Male</option>
-				<option value="female">Female</option>
-			</select>  
-		</p>
-	    
-		<p> <label for="weight">Weight:</label>
-			<select id="weight"  name="weight" required>
-				<option value="" selected disabled hidden> </option>
-				<option value=100>100 lbs / 45 kg </option>
-				<option value=120>120 lbs / 54 kg </option>
-				<option value=140>140 lbs / 64 kg </option>
-				<option value=160>160 lbs / 73 kg </option>
-				<option value=180>180 lbs / 82 kg </option>
-				<option value=200>200 lbs / 91 kg </option>
-				<option value=220>220 lbs / 100 kg </option>
-				<option value=240>240 lbs / 109 kg </option>
-			</select>
-		</p>
-		
-		<p> <label for="hour"> How many hours do you plan to drink?  </label> 
-			<select id="hour"  name="hour" required>
-				<option value="" selected disabled hidden> </option>
-				<option value=1>1 hour or less</option>
-				<option value=2>2 hours </option>
-				<option value=3>3 hours </option>
-				<option value=4>4 hours </option>
-				<option value=5>5 hours </option>
-				<option value=6>6 hours </option>
-				<option value=7>7 hours </option>
-				<option value=8>8 hours </option>
-			</select> 
-		</p>
-		
-		<input type="submit" value="Submit" />
-
+	    <div class="innerFormRight">
+	      <input id="name" type="text" name="name" required> 
+	      <br>
+    	      <select id="gender"  name ="gender" required> 
+		<option value="" selected disabled hidden> </option>
+		<option value="male">Male</option>
+		<option value="female">Female</option>
+	      </select>  
+	      <br>
+	      <select id="weight"  name="weight" required>
+		<option value="" selected disabled hidden> </option>
+		<option value=100>100 lbs / 45 kg </option>
+	        <option value=120>120 lbs / 54 kg </option>
+		<option value=140>140 lbs / 64 kg </option>
+		<option value=160>160 lbs / 73 kg </option>
+		option value=180>180 lbs / 82 kg </option>
+		<option value=200>200 lbs / 91 kg </option>
+		<option value=220>220 lbs / 100 kg </option>
+		<option value=240>240 lbs / 109 kg </option>
+	      </select>
+	      <br>
+  	      <select id="hour"  name="hour" required>
+		<option value="" selected disabled hidden> </option>
+		<option value=1>1 hour or less</option>
+		<option value=2>2 hours </option>
+		<option value=3>3 hours </option>
+		<option value=4>4 hours </option>
+		<option value=5>5 hours </option>
+		<option value=6>6 hours </option>
+		<option value=7>7 hours </option>
+		<option value=8>8 hours </option>
+  	      </select> 
+	    </div>
 	  </form>
-	
-	</center>
+            <center class="submit-btn"><input type="submit" value="Submit"></center>
+       </div>
       </div>
 
       <div class="rightmod">
@@ -401,10 +399,9 @@
 	  <center> <p align="left" id="result"> Fill out your information on the side! </p> </center>
 	</div>
 		
-		<center class="modTitle3"> What is "one drink" exactly?  Look below! </center>
+    	  <center class="modTitle3"> What is "one drink" exactly?  Look below! </center>
         
-		<div class="miniGauge">
-		
+	<div class="miniGauge">
 	  <svg id="fillgauge2" width="19%" height="200" ></svg>
 	  <span>=</span>
 	  <svg id="fillgauge3" width="19%" height="200" ></svg>
@@ -420,8 +417,8 @@
 	  <div>Table Wine - 1 glass </div>
 	  <div>80-Proof Dstilled Spirits - 1 shot or mixed drink </div>
 	</div>
-
       </div>
+
     </div>
     
     </section>
