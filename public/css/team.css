@@ -72,7 +72,7 @@ i {
 /* Container for miniGauge */
 .miniGauge {
     position: relative;
-    padding: 2.5% 0 0 0;
+    padding: 1.5% 0 0 0;
 }
 
 .miniGauge svg {
@@ -120,7 +120,6 @@ select {
 .leftmod{
     height: 100%;
     width: 25%;
-    min-width: 300px;
     background-color: #534947;
     color: white;
     overflow: hidden;
@@ -139,27 +138,21 @@ select {
 }
 
 .modTitle1 {
-    padding: 3% 0 2% 0;
+    padding: 25px 0 0 0;
     font-size: 25px;
     color: #413639;
 }
 
 .modTitle2 {
     padding-bottom: 2%;
-    font-size: 50px;
+    font-size: 2.5em;
     color: #413639;
 }
 
 .modTitle3 {
-    padding: 5% 0 3% 0;
+    padding: 4% 0 0 0;
     font-size: 25px;
     color: #413639;
-}
-
-
-.modContainer {
-    position: relative;
-    padding: 30px 0 30px 0;
 }
 
 /* Position and center align gauge descriptions */
@@ -173,19 +166,13 @@ select {
 
 /* Form result position */
 #result {
- /*   position: relative;
-    top: 20%;
-    right: 3%;
-    float: right;
-    width: 33%;
-    text-align: center;
-    font-size: 2em;*/
     text-align: center;
     font-size: 2em;
+    margin: 0;
 }
 
 .innerFormRight {
-    width: calc(45% - 15px);
+    width: calc(58% - 15px);
     position: relative;
     float: right;
 }
@@ -194,58 +181,27 @@ select {
 .innerFormRight > input,
 .innerFormRight > #gender,
 .innerFormRight > #hour{
-    width: 125px;
+    width: 95px;
     border-radius: 3px;
     border: none;
     height: 25px;
-    margin-bottom: 45px;
+    margin-bottom: 44px;
 } 
 
 .innerFormRight > #weight{
-    width: 125px;
+    width: 95px;
     border-radius: 3px;
     border: none;
     height: 25px;
-    margin-bottom: 60px;
+    margin-bottom: 108px;
 
-}
-
-#name {
-    padding-left: 4px;
-    width: 121px;
-}
-
-#nameTag {
-    position: relative;
-    top: -1px;
-    right: -5px;
-}
-
-#genderTag {
-    position: relative;
-    top: 44px;
-    right: -5px;
-}
-
-#weightTag {
-    position: relative;
-    top: 90px;
-    right: -5px;
-}
-
-#hourTag {
-    position: relative;
-    top: 125px;
 }
 
 .innerFormLeft {
-    width: calc(55% - 15px);
-    height: 261px;
-    position: relative;
-    text-align: right;
+    text-align: left;
     display: inline-block;
     font-size: 20px;
-    padding: 0 15px 0 15px;
+    padding: 0 20% 0 20%;
 }
 
 .leftContainer {
@@ -255,19 +211,41 @@ select {
 
 /* Form Title */
 .leftContainer center {
-    font-size: 30px;
-    padding: 30px 0 80px 15px;
+    font-size: 1.8em;
+    padding: 25px 15% 25px 15%;
+    width: 70%;
+}
+
+#name {
+    height: 23px;
+    border-radius: 3px;
+    outline: none;
+    padding: 0 10px 0 10px;
+    width: calc(100% - 20px);
+}
+
+.innerFormLeft select {
+    width: 100%;
+    border-radius: 3px;
+    height: 24px;
+}
+
+.fieldMargin {
+    padding-top: 20px;
+}
+.innerFieldMargin {
+    padding-top: 5px;
 }
 
 .submit-btn {
     position: relative;
-    top: 100px;
+    top: 10px;
     width: calc(100% - 20px);
     color: white;
     font-size: 22px;
 }
 
-.submit-btn input{
+.submit-btn input {
     width: 70%;
     height: 50px;
     border-radius: 15px;
@@ -282,6 +260,11 @@ select {
     background-color: white;
     color: #413739;
     cursor: pointer;
+}
+
+select {
+    padding: 0 10px 0 7px;
+    outline: none;
 }
 
 /*------------------------------*/
@@ -311,11 +294,11 @@ select {
     height: calc(100vh - 56px);
     background-size: cover;
     background-repeat: no-repeat;
-    background: skyblue; /* For browsers that do not support gradients */    
-    background: -webkit-linear-gradient(left top, skyblue, deepskyblue); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(bottom right, skyblue, deepskyblue); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(bottom right, skyblue, deepskyblue); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to bottom right, skyblue, deepskyblue); /* Standard syntax (must be last) */
+    background: #91C9DC; /* For browsers that do not support gradients */    
+    background: -webkit-linear-gradient(left top, skyblue, #91C9DC); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, skyblue, #91C9DC); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, skyblue, #91C9DC); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, skyblue, #91C9DC); /* Standard syntax (must be last) */
     position: relative;
 }
 
@@ -328,14 +311,14 @@ select {
 
 #dangerInfo {
     padding-top: 1%;
-    width: 50%;
-    float: left;
-    font-family: 'Amaranth', sans-serif;
-    font-style: normal;
-    font-weight: 200;
+    width: 35%;
     position: absolute;
     top: 30%;
     left: 1%;
+}
+
+center > span {
+    font-size: 10px;
 }
 
 .dangerTitle {
@@ -343,7 +326,7 @@ select {
     font-family: 'Amaranth', sans-serif;
     font-style: normal;
     font-weight: 200;
-    width: 50%;
+    width: 35%;
     position: absolute;
     top: 5%;
     left: 1%;
@@ -351,9 +334,9 @@ select {
 
 #imgPos {
     position: absolute;
-    top: 15%;
-    width: 50%;
-    left: 1%;
+    top: 20%;
+    width: 30%;
+    padding-left: 3%;
 }
 
 /*------------------------------*/
@@ -370,20 +353,18 @@ select {
 /* Position of about title */
 .aboutTitle {
     position: relative;
-    top:10%;
+    padding-top: 6%;
     font-size: 5vw;
     color: white;
     font-family: 'Amaranth', sans-serif;
     font-style: normal;
     font-weight: 200;
     margin: 0;
-    padding: 0;
 }
 
 /* Position of second about title */
 .aboutTitle2 {
     position: relative;
-    top: 10%;
     font-size: 5vw;
     color: white;
     font-family: 'Amaranth', sans-serif;
@@ -397,9 +378,8 @@ select {
 .aboutTag {
     font-family: 'Open Sans';
     position: relative;
-    top:15%;
     color: white;
-    padding: 0px 30% 140px 30%;
+    padding: 1% 30% 5% 30%;
     font-size: 20px;
 }
 

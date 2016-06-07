@@ -40,7 +40,7 @@
 
     <section id="team-danger" class="danger">
       
-      	<h3 class="center dangerTitle">San Diego County Alcohol Related Crimes and DUI Arrests</h3>
+      	<h3 class="center dangerTitle">San Diego County Alcohol Related Crimes and DUI Arrests in 2011</h3>
       	<div id="dangerInfo"></div>
       	<img id="imgPos" src="/img/scale.png" alt="Alcohol Scale"></img>
 
@@ -326,28 +326,27 @@
         <center>Find out your alcohol consumption limit!</center>
 	  <form id="alcCalc">
 	    <div class="innerFormLeft">
+	      
 	      <label id="nameTag" label for="name">Name:</label>
-	      <br>
-      	      <label id="genderTag" label for="gender">Gender:</label>
-	      <br>
-	      <label id="weightTag" label for="weight">Weight:</label>	
-	      <br>
-	      <label id="hourTag" label for="hour"> Number of hours you plan to drink: </label>
-	    </div>
-	    
-	    <div class="innerFormRight">
+	      <div class="innerFieldMargin"></div>
 	      <input id="name" type="text" name="name" required> 
-	      <br>
-    	      <select id="gender"  name ="gender" required> 
-		<option value="" selected disabled hidden> </option>
+	      <div class="fieldMargin"></div>
+      	      
+	      <label id="genderTag" label for="gender">Gender:</label>
+	      <div class="innerFieldMargin"></div>
+              <select id="gender"  name ="gender" required> 
+	  	<option value="" selected disabled hidden> </option>
 		<option value="male">Male</option>
 		<option value="female">Female</option>
 	      </select>  
-	      <br>
-	      <select id="weight"  name="weight" required>
+	      <div class="fieldMargin"></div>
+
+              <label id="weightTag" label for="weight">Weight:</label>	
+	      <div class="innerFieldMargin"></div>
+              <select id="weight"  name="weight" required>
 		<option value="" selected disabled hidden> </option>
 		<option value=100>100 lbs / 45 kg </option>
-	    <option value=120>120 lbs / 54 kg </option>
+	        <option value=120>120 lbs / 54 kg </option>
 		<option value=140>140 lbs / 64 kg </option>
 		<option value=160>160 lbs / 73 kg </option>
 		<option value=180>180 lbs / 82 kg </option>
@@ -355,7 +354,10 @@
 		<option value=220>220 lbs / 100 kg </option>
 		<option value=240>240 lbs / 109 kg </option>
 	      </select>
-	      <br>
+	      <div class="fieldMargin"></div>
+
+	      <label id="hourTag" label for="hour"> Number of hours you plan to drink: </label>
+	      <div class="innerFieldMargin"></div>
   	      <select id="hour"  name="hour" required>
 		<option value="" selected disabled hidden> </option>
 		<option value=1>1 hour or less</option>
@@ -367,7 +369,9 @@
 		<option value=7>7 hours </option>
 		<option value=8>8 hours </option>
   	      </select> 
+
 	    </div>
+	    
             <center class="submit-btn"> <input type="submit" value="Submit" ></center>
 			 </form>
        </div>
@@ -398,7 +402,7 @@
 	  <div>Beer - 1 bottle or  can </div>
 	  <div>Malt Liquor - 1 bottle </div>
 	  <div>Table Wine - 1 glass </div>
-	  <div>80-Proof Dstilled Spirits - 1 shot or mixed drink </div>
+	  <div>80-Proof Distilled Spirits - 1 shot or mixed drink </div>
 	</div>
       </div>
 
