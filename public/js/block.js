@@ -1,9 +1,10 @@
 function dashboard(id, fData){
-    var barColor = 'steelblue';
-    function segColor(c){ return {low:"#807dba", mid:"#e08214",high:"#41ab5d"}[c]; }
+    var barColor = '#413639';
+    function segColor(c){ return {"2010":"#76513b", "2011":"#e08214","2012":"#a72a3c"}[c]; }
     
     // compute total for each state.
-    fData.forEach(function(d){d.total=d.freq.low+d.freq.mid+d.freq.high;});
+    fData.forEach(function(d){d.total=d.freq['2010']+d.freq['2011']+d.freq['2012'];});
+
     
     // function to handle histogram.
     function histoGram(fD){
@@ -183,7 +184,7 @@ function dashboard(id, fData){
     }
     
     // calculate total frequency by segment for all state.
-    var tF = ['low','mid','high'].map(function(d){ 
+    var tF = ['2010','2011','2012'].map(function(d){ 
         return {type:d, freq: d3.sum(fData.map(function(t){ return t.freq[d];}))}; 
     });    
     

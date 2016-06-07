@@ -90,21 +90,33 @@ app.get('/genderData', function (req, res) {
     if(err){
       return console.error("could not connect to postgres", err);
     }
-    console.log("Gender query executing");
     //Total chronic alcohol disorder cases for each gender
-    var query1 ='with y as( with x as (select g."Gender", replace(g."Hospitalization No.", \'<5\', \'4\') as "Hospitalization No." ' +
+    var query2 ='with y as( with x as (select g."Gender", replace(g."Hospitalization No.", \'<5\', \'4\') as "Hospitalization No.", g."Year" ' +
                 'from cogs121_16_raw.hhsa_chronic_alcohol_related_disorder_by_gender_2010_2012 g ' +
-                'where g."Year" = 2012 and g."Hospitalization No." != \'\') ' +
-                'select x."Gender", cast(x."Hospitalization No." as Integer) as gSum from x) ' +
-                'select y."Gender", sum(y.gSum) as genderSum from y group by y."Gender" order by y."Gender"';
+                'where g."Hospitalization No." != \'\') ' +
+                'select x."Gender", x."Year", cast(x."Hospitalization No." as Integer) as gSum from x) ' +
+                'select y."Gender", y."Year", sum(y.gSum) as genderSum from y group by y."Gender", y."Year" order by y."Gender", y."Year"';
     
-    client.query(query1, function(err, result){
+    client.query(query2, function(err, result){
                     if(err){
                       return console.error('error running query',err);
                     }
-                    res.json(result.rows);
+                    var newJSON = JSON.stringify(result.rows);
+                    var parse = JSON.parse(newJSON);
+                    var year = ["2010", "2011", "2012"];
+
+                    var genderJSON = [ { State: 'Female', freq: {"2010": 0, "2011": 0, "2012": 0}},
+                                       { State: 'Male', freq: {"2010": 0, "2011": 0, "2012": 0}} ]; 
+                    
+                    var g = 0;
+                    for(var i = 0; i < 2; i++) {
+                        var arr = genderJSON[i];
+                        for (var j = 0; j < 3; j++, g++) {
+                          arr.freq[year[j]] = parseInt(parse[g].gendersum);
+                      }
+                    }
+                    res.json(genderJSON);
                     client.end();
-                    console.log("Gender query closing");
                   });
   });
 });
@@ -116,21 +128,37 @@ app.get('/raceData', function (req, res) {
     if(err){
       return console.error("could not connect to postgres", err);
     }
-    console.log("Race query executing");
     //Total chronic alcohol disorder cases for each race
-    var query1 ='with y as( with x as (select r."Race", replace(r."Hospitalization No.", \'<5\', \'4\') as "Hospitalization No." ' +
+    var query3 ='with y as( with x as (select r."Race", replace(r."Hospitalization No.", \'<5\', \'4\') as "Hospitalization No.", r."Year" ' +
                 'from cogs121_16_raw.hhsa_chronic_alcohol_related_disorder_by_race_2010_2012 r ' +
-                'where r."Year" = 2012 and r."Hospitalization No." != \'\') ' +
-                'select x."Race", cast(x."Hospitalization No." as Integer) as rSum from x) ' +
-                'select y."Race", sum(y.rSum) as raceSum from y group by y."Race" order by y."Race"';
+                'where r."Hospitalization No." != \'\') ' +
+                'select x."Race", x."Year", cast(x."Hospitalization No." as Integer) as rSum from x) ' +
+                'select y."Race", y."Year", sum(y.rSum) as raceSum from y group by y."Race", y."Year" order by y."Race", y."Year"';
     
-    client.query(query1, function(err, result){
+    client.query(query3, function(err, result){
                     if(err){
                       return console.error('error running query',err);
                     }
-                    res.json(result.rows);
+                    var newJSON = JSON.stringify(result.rows);
+                    var parse = JSON.parse(newJSON);
+                    var year = ["2010", "2011", "2012"];
+
+                    var raceJSON = [ { State: 'API', freq: {"2010": 0, "2011": 0, "2012": 0}},
+                                     { State: 'Black', freq: {"2010": 0, "2011": 0, "2012": 0}},
+                                     { State: 'Hispanic', freq: {"2010": 0, "2011": 0, "2012": 0}},
+                                     { State: 'Other', freq: {"2010": 0, "2011": 0, "2012": 0}},
+                                     { State: 'White', freq: {"2010": 0, "2011": 0, "2012": 0}} ]; 
+                    
+                    var g = 0;
+                    for(var i = 0; i < 5; i++) {
+                        var arr = raceJSON[i];
+                        for (var j = 0; j < 3; j++, g++) {
+                          arr.freq[year[j]] = parseInt(parse[g].racesum);
+                      }
+                    }
+
+                    res.json(raceJSON);
                     client.end();
-                    console.log("Race query closing");
                   });
   });
 });
@@ -142,21 +170,36 @@ app.get('/ageData', function (req, res) {
     if(err){
       return console.error("could not connect to postgres", err);
     }
-    console.log("Age query executing");
     //Total chronic alcohol disorder cases for each age range
-    var query1 ='with y as( with x as (select a."Age", replace(a."Hospitalization No.", \'<5\', \'4\') as "Hospitalization No." ' +
+    var query4 ='with y as( with x as (select a."Age", replace(a."Hospitalization No.", \'<5\', \'4\') as "Hospitalization No.", a."Year" ' +
                 'from cogs121_16_raw.hhsa_chronic_alcohol_related_disorder_by_age_2010_2012 a ' +
-                'where a."Year" = 2012 and a."Hospitalization No." != \'\') ' +
-                'select x."Age", cast(x."Hospitalization No." as Integer) as aSum from x) ' +
-                'select y."Age", sum(y.aSum) as ageSum from y group by y."Age" order by y."Age"';
+                'where a."Hospitalization No." != \'\' and a."Age" != \'0-14\') ' +
+                'select x."Age", x."Year", cast(x."Hospitalization No." as Integer) as aSum from x) ' +
+                'select y."Age", y."Year", sum(y.aSum) as ageSum from y group by y."Age", y."Year" order by y."Age", y."Year"';
     
-    client.query(query1, function(err, result){
+    client.query(query4, function(err, result){
                     if(err){
                       return console.error('error running query',err);
                     }
-                    res.json(result.rows);
+                    var newJSON = JSON.stringify(result.rows);
+                    var parse = JSON.parse(newJSON);
+                    var year = ["2010", "2011", "2012"];
+
+                    var ageJSON = [ { State: '15-24', freq: {"2010": 0, "2011": 0, "2012": 0}},
+                                     { State: '25-44', freq: {"2010": 0, "2011": 0, "2012": 0}},
+                                     { State: '45-64', freq: {"2010": 0, "2011": 0, "2012": 0}},
+                                     { State: '65+', freq: {"2010": 0, "2011": 0, "2012": 0}} ]; 
+                    
+                    var g = 0;
+                    for(var i = 0; i < 4; i++) {
+                        var arr = ageJSON[i];
+                        for (var j = 0; j < 3; j++, g++) {
+                          arr.freq[year[j]] = parseInt(parse[g].agesum);
+                      }
+                    }
+
+                    res.json(ageJSON);
                     client.end();
-                    console.log("Age query closing");
                   });
   });
 });

@@ -33,42 +33,42 @@
     drugChart(rows1, rows2);
   }
 
-/*  d3.json("/genderData", function(err, data) {
+  d3.json("/genderData", function(err, data) {
+    console.log("INSIDE GENDER DATA");
     if (err) {
         console.log("ERROR");
         console.log(err);
         return;
     }
-    rows3 = data;
-    console.log("genderData", rows3);
-    if (!--remaining) visualizeRisk();
+    console.log("Gender data is: ", data);
+    dashboard('#dashboard1', data);
   });
 
   d3.json("/raceData", function(err, data) {
+    console.log("INSIDE RACE DATA");
     if (err) {
         console.log("ERROR");
         console.log(err);
         return;
     }
-    rows4 = data;
-    console.log("raceData", rows4);
-    if (!--remaining) visualizeRisk();
+    console.log("Race data is: ", data);
+    dashboard('#dashboard2', data);
   });
 
   d3.json("/ageData", function(err, data) {
+    console.log("INSIDE AGE DATA");
     if (err) {
         console.log("ERROR");
         console.log(err);
         return;
     }
-    rows5 = data;
-    console.log("ageData", rows5);
-    if (!--remaining) visualizeRisk();
+    console.log("Age data is: ", data);
+    dashboard('#dashboard3', data);
   });  
 
   function visualizeRisk() {
     riskChart(rows3, rows4, row5);
-  }*/
+  }
 
   /*d3.json("/delphidata", function(err, data) {
     if (err) {

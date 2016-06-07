@@ -5,6 +5,10 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
+a {
+  text-decoration: none;
+}
+
 .nav {
   padding-left: 0;
   margin-bottom: 0;
@@ -25,11 +29,11 @@
   background-color: #eee;
 }
 .nav > li.disabled > a {
-  color: #777;
+  color: #413639;
 }
 .nav > li.disabled > a:hover,
 .nav > li.disabled > a:focus {
-  color: #777;
+  color: #413639;
   text-decoration: none;
   cursor: not-allowed;
   background-color: transparent;
@@ -38,7 +42,7 @@
 .nav .open > a:hover,
 .nav .open > a:focus {
   background-color: #eee;
-  border-color: #337ab7;
+  border-color: #413639;
 }
 .nav .nav-divider {
   height: 1px;
@@ -129,7 +133,7 @@
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
   color: #fff;
-  background-color: #337ab7;
+  background-color: #413639;
 }
 .nav-stacked > li {
   float: none;
