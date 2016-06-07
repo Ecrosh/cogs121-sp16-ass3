@@ -1,4 +1,5 @@
 path {  stroke: #fff; }
+#team-danger path {  stroke: #000; }
 path:hover {  opacity:0.9; }
 rect:hover {  fill:darkgrey; }
 .axis {  font: 10px sans-serif; }
