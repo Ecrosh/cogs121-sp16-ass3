@@ -12,6 +12,7 @@ a {
 .nav {
   padding-left: 0;
   margin-bottom: 0;
+  margin-top: 0;
   list-style: none;
 }
 .nav > li {
@@ -22,11 +23,13 @@ a {
   position: relative;
   display: block;
   padding: 10px 15px;
+  border: 2px solid #413639;
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
-  background-color: #eee;
+  color: #413639;
+  background-color: white;
 }
 .nav > li.disabled > a {
   color: #413639;
@@ -125,16 +128,19 @@ a {
 }
 .nav-pills > li > a {
   border-radius: 4px;
+  color: white;
+  background-color: #413639;
 }
 .nav-pills > li + li {
   margin-left: 2px;
 }
+
+/* Current risk tab */
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
-  color: #fff;
-  background-color: #413639;
 }
+
 .nav-stacked > li {
   float: none;
 }

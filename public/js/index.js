@@ -139,10 +139,10 @@ function drugChart(data, data1){
 		else{
 			location = "Not Available";
 			}
-         infoBox.html("<center>Location <br> <span style=\"font-size: 50px\">"+ location+
-		 "</span> <br><br>Total Alcohol Related Crimes in " + location + "<br><span style=\"font-size: 50px\">" + count[i] +
-         "</span><br><br>Number of DUI Arrests<br><span style=\"font-size: 50px\">" + duiCnt[i] + 
-		 "</span><br><br>Zip Code<br><span style=\"font-size: 50px\">" +zipCode[i] + "</span></center>"); //print the associated data
+         infoBox.html("<center>Location <br> <span style=\"font-size: 45px\">"+ location+
+		 "</span> <br><br>Total Alcohol Related Crimes in " + location + "<br><span style=\"font-size: 45px\">" + count[i] +
+         "</span><br><br>Number of DUI Arrests<br><span style=\"font-size: 45px\">" + duiCnt[i] + 
+		 "</span><br><br>Zip Code<br><span style=\"font-size: 45px\">" +zipCode[i] + "</span></center>"); //print the associated data
   });
 
  
